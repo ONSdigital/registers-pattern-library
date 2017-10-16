@@ -1,12 +1,19 @@
 language: node_js
 node_js:
-  - "8"
+- '8'
 install:
-  - npm install
+- npm install
 script:
-  - npm test
+- npm test
 after_success:
-  - npm run coverage
+- npm run coverage
 cache:
   directories:
-    - node_modules
+  - node_modules
+deploy:
+  on:
+    branch: feature/npm-publish
+  provider: npm
+  email: "Tom.Cooling@ons.gov.uk"
+  api_key:
+    secure: kRkIA8hDUcFbnP+a0hIuCy+EdnimTZQEsiqdzaDzH4tdB5vBD0wa8kHr8o7leFLs3MtPBakyju+/fZBNymUjlZVmpaQ2I/tWHCDjBfAILhMKMAvI8rUIufHC6ltyyZC5gkJesmiO1xTljKcw4BasLv+liS8rcUGFTpIVOf/5BiN+sqvs1ujC4KJz7wRWyZe/RFAIGCJIccKX5Q6fZhZsTONEk+ifMpt0Iy6lF5MAEMPanTyvAB9+sJ53iJAcN1XeEKgq3Xd02LcWmnIJR1SKt/05cpzau09sFC9MIBLwQCiu3tOEMd94fjdGerBp12vhAWSKjN5bocaQ5nTZUVIEvraWavbpNHTyRM6MfjzEDAU2K/SGIeFyPUImK+kz6kBo5mMcdg9S3dQKaVJYTWvV5cnFYB5iSbCwmOJaUOy+MzucFkkbjVl9NMoNk3ZCaFF7lDKT8FW/0SqBZAsJFrf5OM2ueYPnYe6+bZTs3v8roqIMPD17KOjq6Q4Mn7VBkgctECGcNLB92D6RutK1Z7skb7E6GCSOWrNYdjn9ogJb6m0EKLOOuwzrxKhLmtArnUYFJDTN9wfNz7Jr0saVrStGizH/JM7BKQP67+owjqjPKRh/XHo0q7J2QCNdeVKNeqbeUuE8omIqsgSt/3Jr9fIFt5ovam40SiT0y2/i+N6ISeg=
