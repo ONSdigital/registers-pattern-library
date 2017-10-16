@@ -12,3 +12,14 @@ Contributing guidelines
 
 * We use the [Airbnb React/JSX Style Guide](https://github.com/airbnb/javascript)
 * To use linting as you write code, find the correct [ESLint add-on](http://eslint.org/docs/user-guide/integrations) for your editor
+
+### Storybook
+
+* If you add a new component, add a coresponding 'story' in `./src/stories`
+* Documentation can be found [here](https://github.com/storybooks/storybook)
+
+### Testing
+
+* All components should have their own tests
+* Add your tests to `src/__tests__`
+* The tests use (Enzyme)[https://github.com/airbnb/enzyme]

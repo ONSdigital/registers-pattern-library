@@ -6,6 +6,12 @@ React library for common components across Registers user interfaces.
 
 Used [this](https://myappincome.co.uk/how-to-create-local-npm-package-of-react-components/) tutorial to help with setting up the project.
 
+## Running the Storybook
+
+```shell
+npm run storybook
+```
+
 ## Setup
 
 ## Running
