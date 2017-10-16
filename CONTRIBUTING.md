@@ -22,4 +22,4 @@ Contributing guidelines
 
 * All components should have their own tests
 * Add your tests to `src/__tests__`
-* The tests use (Enzyme)[https://github.com/airbnb/enzyme]
+* The tests use [Enzyme](https://github.com/airbnb/enzyme)
