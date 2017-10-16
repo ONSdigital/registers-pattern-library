@@ -1,4 +1,4 @@
-# registers-pattern-library
+# registers-react-library
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](./LICENSE)
 
