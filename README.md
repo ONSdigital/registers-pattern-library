@@ -6,17 +6,31 @@ React library for common components across Registers user interfaces.
 
 Used [this](https://myappincome.co.uk/how-to-create-local-npm-package-of-react-components/) tutorial to help with setting up the project.
 
+## Environment Setup
+
+Install NPM, it is included with Node.js ([Download](https://nodejs.org/en/))
+
 ## Running the Storybook
 
 ```shell
 npm run storybook
 ```
 
-## Setup
-
-## Running
-
 ## Testing
+
+To run the Enzyme tests, run the following command:
+
+```shell
+npm run testonly
+```
+
+## Linting
+
+To run the linter, run the following command:
+
+```shell
+npm run lint
+```
 
 ## Contributing
 
