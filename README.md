@@ -18,10 +18,10 @@ npm run storybook
 
 ## Testing
 
-To run the Enzyme tests, run the following command:
+To run the Enzyme tests (using Jest as a test runner), run the following command:
 
 ```shell
-npm run testonly
+npm run test
 ```
 
 ## Linting

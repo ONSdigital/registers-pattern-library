@@ -1,6 +1,8 @@
 language: node_js
-install: # Use || true to not fail the build if npm install fails
-  - npm install || true 
+node_js:
+  - "8"
+install:
+  - npm install
 script:
   - npm test
 cache:
