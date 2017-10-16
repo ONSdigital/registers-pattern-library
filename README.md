@@ -16,6 +16,15 @@ Install NPM, it is included with Node.js ([Download](https://nodejs.org/en/))
 npm run storybook
 ```
 
+## Deploy the Storybook to Github Pages
+
+```shell
+npm run build-storybook
+npm run deploy-storybook
+```
+
+You can access the deployed Storybook (here)[https://onsdigital.github.io/registers-react-library].
+
 ## Testing
 
 To run the Enzyme tests (using Jest as a test runner), run the following command:
