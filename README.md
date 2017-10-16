@@ -23,7 +23,7 @@ npm run build-storybook
 npm run deploy-storybook
 ```
 
-You can access the deployed Storybook (here)[https://onsdigital.github.io/registers-react-library].
+You can access the deployed Storybook [here](https://onsdigital.github.io/registers-react-library).
 
 ## Testing
 
