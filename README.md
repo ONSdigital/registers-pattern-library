@@ -1,6 +1,6 @@
 # registers-react-library
 
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](./LICENSE)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](./LICENSE) [![Dependency Status](https://www.versioneye.com/user/projects/59e49c0d0fb24f213b61dc12/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59e49c0d0fb24f213b61dc12)
 
 React library for common components across Registers user interfaces.
 
