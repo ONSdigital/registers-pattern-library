@@ -1,20 +1,22 @@
 {
-    "name": "react-npm-boilerplate",
-    "version": "1.0.1",
-    "description": "Boilerplate for creating React Npm packages with ES2015",
+    "name": "registers-react-library",
+    "version": "0.0.1",
+    "description": "A library of React components for ONS registers projects, using the external ONS pattern library.",
     "repository": {
         "type": "git",
-        "url": "https://github.com/juliancwirko/react-npm-boilerplate.git"
+        "url": "https://github.com/ONSdigital/registers-react-library.git"
     },
-    "author": "Julian Ćwirko",
+    "author": "ONS Digital",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/juliancwirko/react-npm-boilerplate/issues"
+        "url": "https://github.com/ONSdigital/registers-react-library/issues"
     },
-    "homepage": "https://github.com/juliancwirko/react-npm-boilerplate",
+    "homepage": "https://github.com/ONSdigital/registers-react-library",
     "keywords": [
         "react-component",
-        "react"
+        "react",
+        "ONS",
+        "pattern-library"
     ],
     "options": {
         "mocha": "--require scripts/mocha_runner src/**/__tests__/**/*.js"
