@@ -2,10 +2,10 @@ import BreadCrumb from './BreadCrumb';
 import Footer from './Footer';
 import Header from './Header';
 import NavBar from './NavBar';
- 
-export { 
+
+export {
     Footer,
     Header,
     NavBar,
-    BreadCrumb
+    BreadCrumb,
 };
