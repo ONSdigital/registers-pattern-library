@@ -13,6 +13,7 @@ cache:
 deploy:
   on:
     branch: feature/npm-publish
+  skip_cleanup: true
   provider: npm
   email: "Tom.Cooling@ons.gov.uk"
   api_key:
