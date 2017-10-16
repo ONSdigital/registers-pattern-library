@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/ONSdigital/registers-react-library/issues"
   },
-  "homepage": "https://github.com/ONSdigital/registers-react-library",
+  "homepage": "https://ONSdigital.github.io/registers-react-library",
   "keywords": [
     "react-component",
     "react",
@@ -23,6 +23,8 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
+    "build-storybook": "build-storybook -c .storybook -o .out",
+    "deploy-storybook": "storybook-to-ghpages",
     "prepublish": "babel --plugins transform-es2015-modules-umd src --ignore __tests__ --out-dir ./dist",
     "lint": "eslint ./src || true",
     "lintfix": "eslint ./src --fix",
@@ -34,6 +36,7 @@
   "devDependencies": {
     "@storybook/addon-info": "^3.2.12",
     "@storybook/react": "^3.2.12",
+    "@storybook/storybook-deployer": "^2.0.0",
     "babel-cli": "^6.6.4",
     "babel-core": "^6.7.4",
     "babel-eslint": "^7.2.3",
@@ -50,6 +53,7 @@
     "eslint-config-airbnb": "^15.0.1",
     "eslint-plugin-import": "^2.3.0",
     "eslint-plugin-react": "^7.1.0",
+    "gh-pages": "^1.0.0",
     "jest": "^14.1.0",
     "jsdom": "^8.1.0",
     "mocha": "^2.4.5",
