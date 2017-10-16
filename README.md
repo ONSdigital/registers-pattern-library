@@ -1,6 +1,6 @@
 # registers-react-library
 
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](./LICENSE)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](./LICENSE) [![Build Status](https://travis-ci.org/ONSdigital/registers-react-library.svg?branch=feature%2Fci-pipeline)](https://travis-ci.org/ONSdigital/registers-react-library) [![Coverage Status](https://coveralls.io/repos/github/ONSdigital/registers-react-library/badge.svg?branch=feature%2Fci-pipeline)](https://coveralls.io/github/ONSdigital/registers-react-library?branch=feature%2Fci-pipeline) [![Dependency Status](https://www.versioneye.com/user/projects/59e49c0d0fb24f213b61dc12/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59e49c0d0fb24f213b61dc12)
 
 React library for common components across Registers user interfaces.
 
@@ -16,12 +16,21 @@ Install NPM, it is included with Node.js ([Download](https://nodejs.org/en/))
 npm run storybook
 ```
 
-## Testing
-
-To run the Enzyme tests, run the following command:
+## Deploy the Storybook to Github Pages
 
 ```shell
-npm run testonly
+npm run build-storybook
+npm run deploy-storybook
+```
+
+You can access the deployed Storybook [here](https://onsdigital.github.io/registers-react-library).
+
+## Testing
+
+To run the Enzyme tests (using Jest as a test runner), run the following command:
+
+```shell
+npm run test
 ```
 
 ## Linting

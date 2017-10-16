@@ -6,8 +6,8 @@ class NavBar extends React.Component {
   }
   render() {
     return (
-      <div className="my-component">
-        <h1>NavBar</h1>
+      <div>
+        <h1 className="test-header">NavBar</h1>
       </div>
     );
   }

@@ -6,8 +6,8 @@ class BreadCrumb extends React.Component {
   }
   render() {
     return (
-      <div className="my-component">
-        <h1>BreadCrumb</h1>
+      <div>
+        <h1 className="test-header">BreadCrumb</h1>
       </div>
     );
   }
