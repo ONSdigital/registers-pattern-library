@@ -4,7 +4,7 @@ import { shallow, mount, render } from 'enzyme';
 import { expect } from 'chai';
 import sinon from 'sinon';
 
-import Footer from '../components/BreadCrumb';
+import Footer from '../components/Footer';
 
 // Demo tests
 
