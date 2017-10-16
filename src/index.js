@@ -1,7 +1,7 @@
-import BreadCrumb from './BreadCrumb';
-import Footer from './Footer';
-import Header from './Header';
-import NavBar from './NavBar';
+import BreadCrumb from './components/BreadCrumb';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import NavBar from './components/NavBar';
 
 export {
     Footer,

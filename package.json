@@ -1,71 +1,74 @@
 {
-    "name": "registers-react-library",
-    "version": "0.0.1",
-    "description": "A library of React components for ONS registers projects, using the external ONS pattern library.",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/ONSdigital/registers-react-library.git"
+  "name": "registers-react-library",
+  "version": "0.0.1",
+  "description": "A library of React components for ONS registers projects, using the external ONS pattern library.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ONSdigital/registers-react-library.git"
+  },
+  "author": "ONS Digital",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ONSdigital/registers-react-library/issues"
+  },
+  "homepage": "https://github.com/ONSdigital/registers-react-library",
+  "keywords": [
+    "react-component",
+    "react",
+    "ONS",
+    "pattern-library"
+  ],
+  "options": {
+    "mocha": "--require scripts/mocha_runner src/**/__tests__/**/*.js"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "prepublish": "babel --plugins transform-es2015-modules-umd src --ignore __tests__ --out-dir ./dist",
+    "lint": "eslint ./src",
+    "lintfix": "eslint ./src --fix",
+    "testonly": "mocha $npm_package_options_mocha",
+    "test": "npm run lint && npm run testonly",
+    "test-watch": "npm run testonly -- --watch --watch-extensions js"
+  },
+  "devDependencies": {
+    "@storybook/addon-info": "^3.2.12",
+    "@storybook/react": "^3.2.12",
+    "babel-cli": "^6.6.4",
+    "babel-core": "^6.7.4",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-es2015-modules-umd": "^6.6.5",
+    "babel-polyfill": "^6.7.4",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-2": "^6.5.0",
+    "chai": "^3.5.0",
+    "enzyme": "^2.2.0",
+    "eslint": "^3.0.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-react": "^7.1.0",
+    "jsdom": "^8.1.0",
+    "mocha": "^2.4.5",
+    "nodemon": "^1.9.1",
+    "react": "^15.0.0",
+    "react-addons-test-utils": "^15.0.0",
+    "react-dom": "^15.0.0",
+    "sinon": "^1.17.3"
+  },
+  "peerDependencies": {
+    "react": "~0.14.8 || ^15.0.0",
+    "react-dom": "~0.14.8 || ^15.0.0"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.6.1"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/react-scripts/config/eslint.js",
+    "env": {
+      "mocha": true
     },
-    "author": "ONS Digital",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/ONSdigital/registers-react-library/issues"
-    },
-    "homepage": "https://github.com/ONSdigital/registers-react-library",
-    "keywords": [
-        "react-component",
-        "react",
-        "ONS",
-        "pattern-library"
-    ],
-    "options": {
-        "mocha": "--require scripts/mocha_runner src/**/__tests__/**/*.js"
-    },
-    "scripts": {
-        "prepublish": "babel --plugins transform-es2015-modules-umd src --ignore __tests__ --out-dir ./dist",
-        "lint": "eslint ./src",
-        "lintfix": "eslint ./src --fix",
-        "testonly": "mocha $npm_package_options_mocha",
-        "test": "npm run lint && npm run testonly",
-        "test-watch": "npm run testonly -- --watch --watch-extensions js"
-    },
-    "devDependencies": {
-        "babel-cli": "^6.6.4",
-        "babel-core": "^6.7.4",
-        "babel-eslint": "^7.2.3",
-        "babel-plugin-transform-es2015-modules-umd": "^6.6.5",
-        "babel-polyfill": "^6.7.4",
-        "babel-preset-es2015": "^6.6.0",
-        "babel-preset-react": "^6.5.0",
-        "babel-preset-stage-2": "^6.5.0",
-        "chai": "^3.5.0",
-        "enzyme": "^2.2.0",
-        "eslint": "^3.0.0",
-        "eslint-config-airbnb": "^15.0.1",
-        "eslint-plugin-import": "^2.3.0",
-        "eslint-plugin-react": "^7.1.0",
-        "jsdom": "^8.1.0",
-        "mocha": "^2.4.5",
-        "nodemon": "^1.9.1",
-        "react-addons-test-utils": "^15.0.0",
-        "react": "^15.0.0",
-        "react-dom": "^15.0.0",
-        "sinon": "^1.17.3"
-    },
-    "peerDependencies": {
-        "react": "~0.14.8 || ^15.0.0",
-        "react-dom": "~0.14.8 || ^15.0.0"
-    },
-    "dependencies": {
-        "babel-runtime": "^6.6.1"
-    },
-    "eslintConfig": {
-        "extends": "./node_modules/react-scripts/config/eslint.js",
-        "env": {
-          "mocha": true
-        },
-        "rules": {
-          "strict": 0
-        }
+    "rules": {
+      "strict": 0
     }
+  }
 }
