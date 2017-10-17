@@ -10,7 +10,7 @@ class Banner extends React.Component {
       banner: {
         marginTop: '-20px',
         width: '100vw',
-        backgroundColor: '#3B7A9E',
+        backgroundColor: this.props.backgroundColour,
         color: '#fff',
         boxSizing: 'border-box',
         display: 'block',
@@ -50,11 +50,13 @@ class Banner extends React.Component {
 
 Banner.defaultProps = {
   message: '',
+  backgroundColour: '#3B7A9E',
 };
 
 Banner.propTypes = {
   text: PropTypes.string.isRequired,
   message: PropTypes.string,
+  backgroundColour: PropTypes.string,
 };
 
 export default Banner;

@@ -193,6 +193,13 @@ storiesOf('Banner', module)
     (<Banner
       text="BETA"
     />),
+  ))
+  .add('alpha banner with message and custom colour', withInfo('doc string about my component')(() =>
+    (<Banner
+      text="ALPHA"
+      message="this release is still in development."
+      backgroundColour="#D32F2F"
+    />),
   ));
 
 // storiesOf('Footer', module)
