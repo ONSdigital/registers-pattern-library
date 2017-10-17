@@ -11,8 +11,42 @@ import Button from '../components/Button';
 import './ons_css.css';
 
 storiesOf('Header', module)
-  .add('with text', withInfo('doc string about my component')(() =>
-    <Header />,
+  .add('with links (when logged in)', withInfo('doc string about my component')(() =>
+    (<Header
+      showHeaderItems
+      headerLinks={[
+        { text: 'User Details', link: '/UserDetails' },
+        { text: 'Information', link: '/TechnicalInformation' },
+      ]}
+      imageUrl="/Home"
+    />
+    ),
+  ))
+  .add('with links + button (when logged in)', withInfo('doc string about my component')(() =>
+  (<Header
+    showHeaderItems
+    headerLinks={[
+      { text: 'User Details', link: '/UserDetails' },
+      { text: 'Information', link: '/TechnicalInformation' },
+    ]}
+    imageUrl="/Home"
+  >
+    <Button
+      id="logoutButton"
+      size="thin"
+      text="Logout"
+      onClick={() => alert('Clicked logout button...')}
+      ariaLabel="Logout Button"
+      type="submit"
+    />
+  </Header>
+  ),
+))
+  .add('without links (not logged in)', withInfo('doc string about my component')(() =>
+    (<Header
+      showHeaderItems={false}
+      imageUrl="/Home"
+    />),
   ));
 
 storiesOf('Footer', module)
