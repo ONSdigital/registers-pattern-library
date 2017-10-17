@@ -1,10 +1,10 @@
 # registers-react-library
 
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](./LICENSE) [![Build Status](https://travis-ci.org/ONSdigital/registers-react-library.svg?branch=feature%2Fci-pipeline)](https://travis-ci.org/ONSdigital/registers-react-library) [![Coverage Status](https://coveralls.io/repos/github/ONSdigital/registers-react-library/badge.svg?branch=feature%2Fci-pipeline)](https://coveralls.io/github/ONSdigital/registers-react-library?branch=feature%2Fci-pipeline) [![Dependency Status](https://www.versioneye.com/user/projects/59e49c0d0fb24f213b61dc12/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59e49c0d0fb24f213b61dc12)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](./LICENSE) [![Build Status](https://travis-ci.org/ONSdigital/registers-react-library.svg?branch=develop)](https://travis-ci.org/ONSdigital/registers-react-library) [![Coverage Status](https://coveralls.io/repos/github/ONSdigital/registers-react-library/badge.svg?branch=develop)](https://coveralls.io/github/ONSdigital/registers-react-library?branch=develop) [![Dependency Status](https://www.versioneye.com/user/projects/59e49c0d0fb24f213b61dc12/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59e49c0d0fb24f213b61dc12) [![npm version](https://badge.fury.io/js/registers-react-library.svg)](https://badge.fury.io/js/registers-react-library)
 
 React library for common components across Registers user interfaces.
 
-Used [this](https://myappincome.co.uk/how-to-create-local-npm-package-of-react-components/) tutorial to help with setting up the project.
+[This](https://myappincome.co.uk/how-to-create-local-npm-package-of-react-components/) tutorial was used to help setup up the project.
 
 ## Environment Setup
 
