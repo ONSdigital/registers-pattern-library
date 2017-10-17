@@ -87,7 +87,7 @@ storiesOf('NavBar', module)
   ));
 
 storiesOf('BreadCrumb', module)
-  .add('with text', withInfo('doc string about my component')(() =>
+  .add('with mix of links and text', withInfo('doc string about my component')(() =>
     (<BreadCrumb
       breadCrumbItems={[
         { name: 'Home', link: '/Home' },
@@ -95,6 +95,22 @@ storiesOf('BreadCrumb', module)
         { name: '123456789', link: '/Enterprises/123456789' },
         { name: 'Legal Unit', link: '' },
         { name: '987654321', link: '/LegalUnits/987654321' },
+      ]}
+    />),
+  ))
+  .add('with just text', withInfo('doc string about my component')(() =>
+    (<BreadCrumb
+      breadCrumbItems={[
+        { name: 'Home', link: '' },
+        { name: 'Reference Search', link: '' },
+      ]}
+    />),
+  ))
+  .add('with just links', withInfo('doc string about my component')(() =>
+    (<BreadCrumb
+      breadCrumbItems={[
+        { name: 'Home', link: '/Home' },
+        { name: 'Reference Search', link: '/RefSearch' },
       ]}
     />),
   ));
