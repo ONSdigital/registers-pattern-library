@@ -18,16 +18,37 @@ class NavBar extends React.Component {
         <nav>
           <div className="wrapper">
             <ul className="primary-nav__list">
-              <li className={this.getPrimary('/Home')}>
-                <Link className="primary-nav__link col col--md-7 col--lg-9" to="/Home">
-                    Home
-                </Link>
-              </li>
-              <li className={this.getPrimary('/RefSearch')}>
-                <Link className="primary-nav__link col col--md-7 col--lg-9" to="/RefSearch">
-                    Search
-                </Link>
-              </li>
+              {
+                this.props.navBarItems.map((item) => {
+                  if (item.items) {
+                    return (
+                      <li className="primary-nav__item js-nav js-expandable ">
+                        <a className="primary-nav__link col col--md-8 col--lg-10" href={item.link} aria-haspopup="true">{item.text}</a>
+                        <ul className="primary-nav__child-list col col--md-16 col--lg-20 js-expandable__content js-nav-hidden jsEnhance" aria-expanded="false" aria-label="submenu">
+                          {
+                            item.items.map((subItem) => {
+                              return (
+                                <li className="primary-nav__child-item  js-expandable__child">
+                                  <Link className="primary-nav__child-link" to={subItem.link}>
+                                    {subItem.text}
+                                  </Link>
+                                </li>
+                              );
+                            })
+                          }
+                        </ul>
+                      </li>
+                    );
+                  }
+                  return (
+                    <li className={this.getPrimary(item.link)}>
+                      <Link className="primary-nav__link col col--md-7 col--lg-9" to={item.link}>
+                        {item.text}
+                      </Link>
+                    </li>
+                  );
+                })
+              }
             </ul>
           </div>
         </nav>
@@ -38,6 +59,7 @@ class NavBar extends React.Component {
 
 NavBar.propTypes = {
   primary: PropTypes.string.isRequired,
+  navBarItems: PropTypes.array.isRequired,
 };
 
 export default NavBar;

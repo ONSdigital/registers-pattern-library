@@ -37,7 +37,13 @@ storiesOf('Full Page Examples', module)
             type="submit"
           />
         </Header>
-        <NavBar primary="/Home" />
+        <NavBar
+          primary="/Home"
+          navBarItems={[
+            { text: 'Home', link: '/Home' },
+            { text: 'Search', link: '/RefSearch' },
+          ]}
+        />
         <BreadCrumb
           breadCrumbItems={[
             { name: 'Home', link: '/Home' },
@@ -119,8 +125,24 @@ storiesOf('Footer', module)
   ));
 
 storiesOf('NavBar', module)
-  .add('with text', withInfo('doc string about my component')(() =>
-    <NavBar primary="/Home" />,
+  .add('with normal links', withInfo('doc string about my component')(() =>
+    (<NavBar
+      primary="/Home"
+      navBarItems={[
+        { text: 'Home', link: '/Home' },
+        { text: 'Search', link: '/RefSearch' },
+      ]}
+    />),
+  ))
+  .add('with normal and dropdown links', withInfo('doc string about my component')(() =>
+    (<NavBar
+      primary="/Home"
+      navBarItems={[
+        { text: 'Home', link: '/Home' },
+        { text: 'Search', link: '/Search' },
+        { text: 'Unit Search', link: '/RefSearch', items: [{ text: 'Enterprise', link: '/Enterprise' }, { text: 'Legal Unit', link: '/LegalUnit' }, { text: 'VAT', link: '/VAT' }] },
+      ]}
+    />),
   ));
 
 storiesOf('BreadCrumb', module)
