@@ -6,14 +6,19 @@ import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
 import BreadCrumb from '../components/BreadCrumb';
 import Button from '../components/Button';
+import Banner from '../components/Banner';
 // import { MemoryRouter } from 'react-router';
 
 import './ons_css.css';
 
-storiesOf('Full Page Example', module)
+storiesOf('Full Page Examples', module)
   .add('full page', withInfo('doc string about my component')(() => {
     return (
       <div>
+        <Banner
+          text="ALPHA"
+          message="this release is still in development."
+        />
         <Header
           showHeaderItems
           headerLinks={[
@@ -176,6 +181,19 @@ storiesOf('Button', module)
       loading
     />);
   }));
+
+storiesOf('Banner', module)
+  .add('alpha banner with message', withInfo('doc string about my component')(() =>
+    (<Banner
+      text="ALPHA"
+      message="this release is still in development."
+    />),
+  ))
+  .add('beta banner', withInfo('doc string about my component')(() =>
+    (<Banner
+      text="BETA"
+    />),
+  ));
 
 // storiesOf('Footer', module)
 //   .addDecorator(story => (
