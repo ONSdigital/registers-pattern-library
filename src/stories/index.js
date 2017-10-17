@@ -11,7 +11,7 @@ import Button from '../components/Button';
 import './ons_css.css';
 
 storiesOf('Full Page Example', module)
-  .add('with text', withInfo('doc string about my component')(() => {
+  .add('full page', withInfo('doc string about my component')(() => {
     return (
       <div>
         <Header
@@ -21,7 +21,16 @@ storiesOf('Full Page Example', module)
             { text: 'Information', link: '/TechnicalInformation' },
           ]}
           imageUrl="/Home"
-        />
+        >
+          <Button
+            id="logoutButton"
+            size="thin"
+            text="Logout"
+            onClick={() => alert('Clicked logout button...')}
+            ariaLabel="Logout Button"
+            type="submit"
+          />
+        </Header>
         <NavBar primary="/Home" />
         <BreadCrumb
           breadCrumbItems={[
@@ -32,7 +41,13 @@ storiesOf('Full Page Example', module)
             { name: '987654321', link: '/LegalUnits/987654321' },
           ]}
         />
-        <Footer />
+        <Footer
+          footerSection={[
+            { title: 'Help', items: [{ text: 'Accessibility', link: '/Accessibility' }, { text: 'Search History', link: '/SearchHistory' }] },
+            { title: 'About SBR', items: [{ text: 'What is SBR', link: '/WhatIsSbr' }] },
+            { title: 'Connect with us', items: [{ text: 'statistical.business.register@ons.gov.uk', emailHref: 'mailto:statistical.business.register@ons.gov.uk?subject=SBR&body=message%20goes%20here' }] },
+          ]}
+        />
       </div>
     );
   }));
@@ -50,25 +65,24 @@ storiesOf('Header', module)
     ),
   ))
   .add('with links + button (when logged in)', withInfo('doc string about my component')(() =>
-  (<Header
-    showHeaderItems
-    headerLinks={[
-      { text: 'User Details', link: '/UserDetails' },
-      { text: 'Information', link: '/TechnicalInformation' },
-    ]}
-    imageUrl="/Home"
-  >
-    <Button
-      id="logoutButton"
-      size="thin"
-      text="Logout"
-      onClick={() => alert('Clicked logout button...')}
-      ariaLabel="Logout Button"
-      type="submit"
-    />
-  </Header>
-  ),
-))
+    (<Header
+      showHeaderItems
+      headerLinks={[
+        { text: 'User Details', link: '/UserDetails' },
+        { text: 'Information', link: '/TechnicalInformation' },
+      ]}
+      imageUrl="/Home"
+    >
+      <Button
+        id="logoutButton"
+        size="thin"
+        text="Logout"
+        onClick={() => alert('Clicked logout button...')}
+        ariaLabel="Logout Button"
+        type="submit"
+      />
+    </Header>),
+  ))
   .add('without links (not logged in)', withInfo('doc string about my component')(() =>
     (<Header
       showHeaderItems={false}
@@ -77,8 +91,23 @@ storiesOf('Header', module)
   ));
 
 storiesOf('Footer', module)
-  .add('with text', withInfo('doc string about my component')(() =>
-    <Footer />,
+  .add('links and email section', withInfo('doc string about my component')(() =>
+    (<Footer
+      footerSection={[
+        { title: 'Help', items: [{ text: 'Accessibility', link: '/Accessibility' }, { text: 'Search History', link: '/SearchHistory' }] },
+        { title: 'About SBR', items: [{ text: 'What is SBR', link: '/WhatIsSbr' }] },
+        { title: 'Connect with us', items: [{ text: 'statistical.business.register@ons.gov.uk', emailHref: 'mailto:statistical.business.register@ons.gov.uk?subject=SBR&body=message%20goes%20here' }] },
+      ]}
+    />),
+  ))
+  .add('just links', withInfo('doc string about my component')(() =>
+    (<Footer
+      footerSection={[
+        { title: 'Help', items: [{ text: 'Accessibility', link: '/Accessibility' }, { text: 'Search History', link: '/SearchHistory' }] },
+        { title: 'Support', items: [{ text: 'Support', link: '/Support' }] },
+        { title: 'Features', items: [{ text: 'Reference Search', link: '/RefSearch' }] },
+      ]}
+    />),
   ));
 
 storiesOf('NavBar', module)

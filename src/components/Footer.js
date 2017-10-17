@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 
 class Footer extends React.Component {
@@ -22,35 +23,34 @@ class Footer extends React.Component {
           <div className="wrapper">
             <nav>
               <div className="footer-nav col-wrap">
-                <div className="col col--lg-one-third col--md-one-third">
-                  <h3 className="footer-nav__heading">Help</h3>
-                  <ul className="footer-nav__list">
-                    <Link to="/Accessibility">
-                      <li className="footer-nav__item" style={footerItemStyle}>
-                        Accessibility
-                      </li>
-                    </Link>
-                    <Link to="/SearchHistory">
-                      <li className="footer-nav__item" style={footerItemStyle}>
-                        Search History
-                      </li>
-                    </Link>
-                  </ul>
-                </div>
-                <div className="col col--lg-one-third col--md-one-third">
-                  <h3 className="footer-nav__heading">About SBR</h3>
-                  <Link to="/WhatIsSbr">
-                    <ul className="footer-nav__list" style={footerItemStyle}>
-                      What is SBR
-                    </ul>
-                  </Link>
-                </div>
-                <div className="col col--lg-one-third col--md-one-third">
-                  <h3 className="footer-nav__heading">Connect with us</h3>
-                  <ul className="footer-nav__list" style={footerMailToStyle} onClick={() => (window.location.href = 'mailto:statistical.business.register@ons.gov.uk?subject=SBR&body=message%20goes%20here')}>
-                    statistical.business.register@ons.gov.uk
-                  </ul>
-                </div>
+                {
+                  this.props.footerSection.map((section) => {
+                    return (
+                      <div className="col col--lg-one-third col--md-one-third">
+                        <h3 className="footer-nav__heading">{section.title}</h3>
+                        <ul className="footer-nav__list">
+                          {
+                            section.items.map((item) => {
+                              if (item.emailHref) {
+                                return (
+                                  <li className="footer-nav__item" style={footerMailToStyle} onClick={() => (window.location.href = item.emailHref)}>
+                                    {item.text}
+                                  </li>
+                                );
+                              }
+                              return (
+                                <Link to={item.link}>
+                                  <li className="footer-nav__item" style={footerItemStyle}>
+                                    {item.text}
+                                  </li>
+                                </Link>
+                              );
+                            })
+                          }
+                        </ul>
+                      </div>);
+                  })
+                }
               </div>
             </nav>
           </div>
@@ -59,5 +59,9 @@ class Footer extends React.Component {
     );
   }
 }
+
+Footer.propTypes = {
+  footerSection: PropTypes.array.isRequired,
+};
 
 export default Footer;
