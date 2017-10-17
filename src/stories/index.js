@@ -25,6 +25,7 @@ storiesOf('Full Page Example', module)
         <NavBar primary="/Home" />
         <BreadCrumb
           breadCrumbItems={[
+            { name: 'Home', link: '/Home' },
             { name: 'Enterprise', link: '' },
             { name: '123456789', link: '/Enterprises/123456789' },
             { name: 'Legal Unit', link: '' },
@@ -89,6 +90,7 @@ storiesOf('BreadCrumb', module)
   .add('with text', withInfo('doc string about my component')(() =>
     (<BreadCrumb
       breadCrumbItems={[
+        { name: 'Home', link: '/Home' },
         { name: 'Enterprise', link: '' },
         { name: '123456789', link: '/Enterprises/123456789' },
         { name: 'Legal Unit', link: '' },

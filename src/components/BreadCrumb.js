@@ -6,20 +6,6 @@ class BreadCrumb extends React.Component {
   componentDidMount() {
     // some logic here - we only test if the method is called
   }
-  getBreadCrumbItems() {
-    return this.props.breadCrumbItems.map((obj) => {
-      if (obj.link === '') {
-        return (<li key={obj.name} className="breadcrumb__item">
-          {obj.name}
-        </li>);
-      }
-      return (<li key={obj.name} className="breadcrumb__item">
-        <Link to={obj.link} style={{ cursor: 'pointer' }}>
-          {obj.name}
-        </Link>
-      </li>);
-    });
-  }
   render() {
     return (
       <div className="page-intro background--gallery">
@@ -29,12 +15,20 @@ class BreadCrumb extends React.Component {
               <nav>
                 <div className="breadcrumb print--hide">
                   <ol className="breadcrumb__list">
-                    <li className="breadcrumb__item">
-                      <Link to="/Home" className="breadcrumb__link">
-                        Home
-                      </Link>
-                    </li>
-                    {this.getBreadCrumbItems()}
+                    {
+                      this.props.breadCrumbItems.map((breadcrumb) => {
+                        if (breadcrumb.link === '') {
+                          return (<li key={breadcrumb.name} className="breadcrumb__item">
+                            {breadcrumb.name}
+                          </li>);
+                        }
+                        return (<li key={breadcrumb.name} className="breadcrumb__item">
+                          <Link to={breadcrumb.link} style={{ cursor: 'pointer' }}>
+                            {breadcrumb.name}
+                          </Link>
+                        </li>);
+                      })
+                    }
                   </ol>
                 </div>
               </nav>
