@@ -6,25 +6,7 @@ class Header extends React.Component {
   componentDidMount() {
     // some logic here - we only test if the method is called
   }
-  getHeaderItems() {
-    return (
-      <div className="secondary-nav col col--lg-two-thirds col--md-two-thirds print--hide">
-        <ul className="secondary-nav__list js-nav-clone__list">
-          {
-            this.props.headerLinks.map((item) => {
-              return (
-                <li key={item.text} className="secondary-nav__item">
-                  <Link className="secondary-nav__link  js-nav-clone__link" to={item.link}>{item.text}</Link>
-                </li>
-              );
-            })
-          }
-          {this.props.children}
-        </ul>
-      </div>);
-  }
   render() {
-    const div = (this.props.showHeaderItems) ? this.getHeaderItems() : null;
     return (
       <div className="wrapper">
         <div className="header col-wrap">
@@ -35,7 +17,20 @@ class Header extends React.Component {
           </div>
           <div className="col col--lg-two-thirds col--md-two-thirds print--hide">&nbsp;</div>
           {this.props.showHeaderItems &&
-            div
+            <div className="secondary-nav col col--lg-two-thirds col--md-two-thirds print--hide">
+              <ul className="secondary-nav__list js-nav-clone__list">
+                {
+                  this.props.headerLinks.map((item) => {
+                    return (
+                      <li key={item.text} className="secondary-nav__item">
+                        <Link className="secondary-nav__link  js-nav-clone__link" to={item.link}>{item.text}</Link>
+                      </li>
+                    );
+                  })
+                }
+                {this.props.children}
+              </ul>
+            </div>
           }
         </div>
       </div>
