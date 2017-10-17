@@ -10,6 +10,32 @@ import Button from '../components/Button';
 
 import './ons_css.css';
 
+storiesOf('Full Page Example', module)
+  .add('with text', withInfo('doc string about my component')(() => {
+    return (
+      <div>
+        <Header
+          showHeaderItems
+          headerLinks={[
+            { text: 'User Details', link: '/UserDetails' },
+            { text: 'Information', link: '/TechnicalInformation' },
+          ]}
+          imageUrl="/Home"
+        />
+        <NavBar primary="/Home" />
+        <BreadCrumb
+          breadCrumbItems={[
+            { name: 'Enterprise', link: '' },
+            { name: '123456789', link: '/Enterprises/123456789' },
+            { name: 'Legal Unit', link: '' },
+            { name: '987654321', link: '/LegalUnits/987654321' },
+          ]}
+        />
+        <Footer />
+      </div>
+    );
+  }));
+
 storiesOf('Header', module)
   .add('with links (when logged in)', withInfo('doc string about my component')(() =>
     (<Header
