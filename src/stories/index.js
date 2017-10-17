@@ -155,6 +155,16 @@ storiesOf('Button', module)
       type="submit"
     />),
   ))
+  .add('thin button', withInfo('doc string about my component')(() =>
+    (<Button
+      id="loginButton"
+      size="thin"
+      text="Login"
+      onClick={() => alert('Clicked login button...')}
+      ariaLabel="Login Button"
+      type="submit"
+    />),
+  ))
   .add('button with loading spinner', withInfo('doc string about my component')(() => {
     return (<Button
       id="loginButton"
