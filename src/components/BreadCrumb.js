@@ -46,4 +46,8 @@ class BreadCrumb extends React.Component {
   }
 }
 
+BreadCrumb.propTypes = {
+  breadCrumbItems: PropTypes.array.isRequired,
+};
+
 export default BreadCrumb;

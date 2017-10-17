@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
 import BreadCrumb from '../components/BreadCrumb';
+import Button from '../components/Button';
 // import { MemoryRouter } from 'react-router';
 
 import './ons_css.css';
@@ -34,6 +35,16 @@ storiesOf('BreadCrumb', module)
         { name: 'Legal Unit', link: '' },
         { name: '987654321', link: '/LegalUnits/987654321' },
       ]}
+    />),
+  ));
+
+storiesOf('Button', module)
+  .add('with text', withInfo('doc string about my component')(() =>
+    (<Button
+      id="loginButton"
+      buttonContent="Login"
+      onClick={() => alert('Clicked login button...')}
+      ariaLabel="Login Button"
     />),
   ));
 
