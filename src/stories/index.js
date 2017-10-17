@@ -1,6 +1,5 @@
 import React from 'react';
-import { storiesOf, addDecorator } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -39,14 +38,27 @@ storiesOf('BreadCrumb', module)
   ));
 
 storiesOf('Button', module)
-  .add('with text', withInfo('doc string about my component')(() =>
+  .add('normal button', withInfo('doc string about my component')(() =>
     (<Button
       id="loginButton"
-      buttonContent="Login"
+      size="wide"
+      text="Login"
       onClick={() => alert('Clicked login button...')}
       ariaLabel="Login Button"
+      type="submit"
     />),
-  ));
+  ))
+  .add('button with loading spinner', withInfo('doc string about my component')(() => {
+    return (<Button
+      id="loginButton"
+      size="wide"
+      text="Login"
+      onClick={() => alert('Clicked login button...')}
+      ariaLabel="Login Button"
+      type="submit"
+      loading
+    />);
+  }));
 
 // storiesOf('Footer', module)
 //   .addDecorator(story => (
