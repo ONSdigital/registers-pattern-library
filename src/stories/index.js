@@ -7,6 +7,7 @@ import NavBar from '../components/NavBar';
 import BreadCrumb from '../components/BreadCrumb';
 import Button from '../components/Button';
 import Banner from '../components/Banner';
+import TitleAndDescription from '../components/TitleAndDescription';
 // import { MemoryRouter } from 'react-router';
 
 import './ons_css.css';
@@ -40,11 +41,13 @@ storiesOf('Full Page Examples', module)
         <BreadCrumb
           breadCrumbItems={[
             { name: 'Home', link: '/Home' },
-            { name: 'Enterprise', link: '' },
-            { name: '123456789', link: '/Enterprises/123456789' },
-            { name: 'Legal Unit', link: '' },
-            { name: '987654321', link: '/LegalUnits/987654321' },
+            { name: 'Accessibility', link: '' },
           ]}
+        />
+        <TitleAndDescription
+          title="Accessibility"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at lectus dapibus, interdum massa in, vehicula augue. Ut non congue elit. Donec eget imperdiet nulla, vel tincidunt metus. Nunc tempus lectus id volutpat ornare. Quisque auctor massa ante, vitae viverra ipsum rhoncus nec. Morbi non lectus varius, iaculis augue vel, laoreet arcu. Vivamus rutrum congue tempus. Duis turpis massa, viverra id mattis eget, auctor id augue. Sed luctus at nisl nec posuere. Praesent eu varius sem. Morbi elementum mauris id ligula pulvinar, sed iaculis ipsum luctus."
+          marginBottom={1}
         />
         <Footer
           footerSection={[
@@ -199,6 +202,21 @@ storiesOf('Banner', module)
       text="ALPHA"
       message="this release is still in development."
       backgroundColour="#D32F2F"
+    />),
+  ));
+
+storiesOf('Title and Description', module)
+  .add('Title with description and margin bottom', withInfo('doc string about my component')(() =>
+    (<TitleAndDescription
+      title="Accessibility"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at lectus dapibus, interdum massa in, vehicula augue. Ut non congue elit. Donec eget imperdiet nulla, vel tincidunt metus. Nunc tempus lectus id volutpat ornare. Quisque auctor massa ante, vitae viverra ipsum rhoncus nec. Morbi non lectus varius, iaculis augue vel, laoreet arcu. Vivamus rutrum congue tempus. Duis turpis massa, viverra id mattis eget, auctor id augue. Sed luctus at nisl nec posuere. Praesent eu varius sem. Morbi elementum mauris id ligula pulvinar, sed iaculis ipsum luctus."
+      marginBottom="1"
+    />),
+  ))
+  .add('Title and no description', withInfo('doc string about my component')(() =>
+    (<TitleAndDescription
+      title="Accessibility"
+      marginBottom="0"
     />),
   ));
 

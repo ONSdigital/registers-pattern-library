@@ -26,20 +26,20 @@ class Footer extends React.Component {
                 {
                   this.props.footerSection.map((section) => {
                     return (
-                      <div className="col col--lg-one-third col--md-one-third">
+                      <div key={section.title} className="col col--lg-one-third col--md-one-third">
                         <h3 className="footer-nav__heading">{section.title}</h3>
                         <ul className="footer-nav__list">
                           {
                             section.items.map((item) => {
                               if (item.emailHref) {
                                 return (
-                                  <li className="footer-nav__item" style={footerMailToStyle} onClick={() => (window.location.href = item.emailHref)}>
+                                  <li key={item.text} className="footer-nav__item" style={footerMailToStyle} onClick={() => (window.location.href = item.emailHref)}>
                                     {item.text}
                                   </li>
                                 );
                               }
                               return (
-                                <Link to={item.link}>
+                                <Link key={item.text} to={item.link}>
                                   <li className="footer-nav__item" style={footerItemStyle}>
                                     {item.text}
                                   </li>
