@@ -17,7 +17,7 @@ class Footer extends React.Component {
       cursor: 'pointer',
     };
     return (
-      <footer className="print--hide" style={{ position: 'absolute', left: 0, right: 0, overflow: 'hidden' }}>
+      <footer id="footer" className="print--hide" style={{ position: 'absolute', left: 0, right: 0, overflow: 'hidden' }}>
         <h2 className="visuallyhidden">Footer links</h2>
         <div className="footer">
           <div className="wrapper">
