@@ -24,12 +24,13 @@ class Button extends React.Component {
 
 Button.defaultProps = {
   loading: false,
+  onClick: null,
 };
 
 Button.propTypes = {
   id: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired, // This can be just text, or a spinner etc.
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   ariaLabel: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   size: PropTypes.string.isRequired, // wide or thin
