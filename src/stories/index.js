@@ -8,12 +8,10 @@ import BreadCrumb from '../components/BreadCrumb';
 import Button from '../components/Button';
 import Banner from '../components/Banner';
 import TitleAndDescription from '../components/TitleAndDescription';
-// import { MemoryRouter } from 'react-router';
-
 import './ons_css.css';
 
 storiesOf('Full Page Examples', module)
-  .add('full page', withInfo('doc string about my component')(() => {
+  .add('full page', withInfo()(() => {
     return (
       <div>
         <Banner
@@ -67,7 +65,7 @@ storiesOf('Full Page Examples', module)
   }));
 
 storiesOf('Header', module)
-  .add('with links (when logged in)', withInfo('doc string about my component')(() =>
+  .add('with links (when logged in)', withInfo()(() =>
     (<Header
       showHeaderItems
       headerLinks={[
@@ -78,7 +76,7 @@ storiesOf('Header', module)
     />
     ),
   ))
-  .add('with links + button (when logged in)', withInfo('doc string about my component')(() =>
+  .add('with links + button (when logged in)', withInfo()(() =>
     (<Header
       showHeaderItems
       headerLinks={[
@@ -97,7 +95,7 @@ storiesOf('Header', module)
       />
     </Header>),
   ))
-  .add('without links (not logged in)', withInfo('doc string about my component')(() =>
+  .add('without links (not logged in)', withInfo()(() =>
     (<Header
       showHeaderItems={false}
       imageUrl="/Home"
@@ -105,7 +103,7 @@ storiesOf('Header', module)
   ));
 
 storiesOf('Footer', module)
-  .add('links and email section', withInfo('doc string about my component')(() =>
+  .add('links and email section', withInfo()(() =>
     (<Footer
       footerSection={[
         { title: 'Help', items: [{ text: 'Accessibility', link: '/Accessibility' }, { text: 'Search History', link: '/SearchHistory' }] },
@@ -114,7 +112,7 @@ storiesOf('Footer', module)
       ]}
     />),
   ))
-  .add('just links', withInfo('doc string about my component')(() =>
+  .add('just links', withInfo()(() =>
     (<Footer
       footerSection={[
         { title: 'Help', items: [{ text: 'Accessibility', link: '/Accessibility' }, { text: 'Search History', link: '/SearchHistory' }] },
@@ -125,7 +123,7 @@ storiesOf('Footer', module)
   ));
 
 storiesOf('NavBar', module)
-  .add('with normal links', withInfo('doc string about my component')(() =>
+  .add('with normal links', withInfo()(() =>
     (<NavBar
       primary="/Home"
       navBarItems={[
@@ -134,7 +132,7 @@ storiesOf('NavBar', module)
       ]}
     />),
   ))
-  .add('with normal and dropdown links', withInfo('doc string about my component')(() =>
+  .add('with normal and dropdown links', withInfo()(() =>
     (<NavBar
       primary="/Home"
       navBarItems={[
@@ -146,7 +144,7 @@ storiesOf('NavBar', module)
   ));
 
 storiesOf('BreadCrumb', module)
-  .add('with mix of links and text', withInfo('doc string about my component')(() =>
+  .add('with mix of links and text', withInfo()(() =>
     (<BreadCrumb
       breadCrumbItems={[
         { name: 'Home', link: '/Home' },
@@ -157,7 +155,7 @@ storiesOf('BreadCrumb', module)
       ]}
     />),
   ))
-  .add('with just text', withInfo('doc string about my component')(() =>
+  .add('with just text', withInfo()(() =>
     (<BreadCrumb
       breadCrumbItems={[
         { name: 'Home', link: '' },
@@ -165,7 +163,7 @@ storiesOf('BreadCrumb', module)
       ]}
     />),
   ))
-  .add('with just links', withInfo('doc string about my component')(() =>
+  .add('with just links', withInfo()(() =>
     (<BreadCrumb
       breadCrumbItems={[
         { name: 'Home', link: '/Home' },
@@ -175,7 +173,7 @@ storiesOf('BreadCrumb', module)
   ));
 
 storiesOf('Button', module)
-  .add('normal button', withInfo('doc string about my component')(() =>
+  .add('normal button', withInfo()(() =>
     (<Button
       id="loginButton"
       size="wide"
@@ -185,7 +183,7 @@ storiesOf('Button', module)
       type="submit"
     />),
   ))
-  .add('thin button', withInfo('doc string about my component')(() =>
+  .add('thin button', withInfo()(() =>
     (<Button
       id="loginButton"
       size="thin"
@@ -195,7 +193,7 @@ storiesOf('Button', module)
       type="submit"
     />),
   ))
-  .add('button with loading spinner', withInfo('doc string about my component')(() => {
+  .add('button with loading spinner', withInfo()(() => {
     return (<Button
       id="loginButton"
       size="wide"
@@ -208,18 +206,18 @@ storiesOf('Button', module)
   }));
 
 storiesOf('Banner', module)
-  .add('alpha banner with message', withInfo('doc string about my component')(() =>
+  .add('alpha banner with message', withInfo()(() =>
     (<Banner
       text="ALPHA"
       message="this release is still in development."
     />),
   ))
-  .add('beta banner', withInfo('doc string about my component')(() =>
+  .add('beta banner', withInfo()(() =>
     (<Banner
       text="BETA"
     />),
   ))
-  .add('alpha banner with message and custom colour', withInfo('doc string about my component')(() =>
+  .add('alpha banner with message and custom colour', withInfo()(() =>
     (<Banner
       text="ALPHA"
       message="this release is still in development."
@@ -228,29 +226,16 @@ storiesOf('Banner', module)
   ));
 
 storiesOf('Title and Description', module)
-  .add('Title with description and margin bottom', withInfo('doc string about my component')(() =>
+  .add('Title with description and margin bottom', withInfo()(() =>
     (<TitleAndDescription
       title="Accessibility"
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at lectus dapibus, interdum massa in, vehicula augue. Ut non congue elit. Donec eget imperdiet nulla, vel tincidunt metus. Nunc tempus lectus id volutpat ornare. Quisque auctor massa ante, vitae viverra ipsum rhoncus nec. Morbi non lectus varius, iaculis augue vel, laoreet arcu. Vivamus rutrum congue tempus. Duis turpis massa, viverra id mattis eget, auctor id augue. Sed luctus at nisl nec posuere. Praesent eu varius sem. Morbi elementum mauris id ligula pulvinar, sed iaculis ipsum luctus."
       marginBottom="1"
     />),
   ))
-  .add('Title and no description', withInfo('doc string about my component')(() =>
+  .add('Title and no description', withInfo()(() =>
     (<TitleAndDescription
       title="Accessibility"
       marginBottom="0"
     />),
   ));
-
-// storiesOf('Footer', module)
-//   .addDecorator(story => (
-//     <MemoryRouter initialEntries={['/Accessibility', '/SearchHistory', '/WhatIsSbr']}>
-//       {story()}
-//     </MemoryRouter>
-//   ))
-//   .add('homepage', () => {
-//     // mockedTasks.inbox = inboxTasks;
-//     // mockedTasks.pinned = pinnedTasks;
-//     return <Footer />;
-//   });
-
