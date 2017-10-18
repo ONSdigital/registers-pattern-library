@@ -7,7 +7,7 @@ class Button extends React.Component {
     // some logic here - we only test if the method is called
   }
   render() {
-    const spinner = (<Loader color="#FFFFFF" size="8px" margin="0px" />);
+    const spinner = (<Loader id="spinner" color="#FFFFFF" size="8px" margin="0px" />);
     return (
       <button
         className={`btn btn--primary btn--${this.props.size}`}
