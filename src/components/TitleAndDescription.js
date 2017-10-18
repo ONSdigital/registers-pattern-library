@@ -12,7 +12,7 @@ class TitleAndDescription extends React.Component {
           <div className="col-wrap">
             <div className="col">
               <div className="col col--md-47 col--lg-48">
-                <h1 className="page-intro__title ">
+                <h1 className="page-intro__title">
                   {this.props.title}
                 </h1>
                 <p className={`page-intro__content margin-bottom--${this.props.marginBottom}`}>
