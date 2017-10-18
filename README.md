@@ -26,11 +26,44 @@ import { Button } from 'registers-react-library';
 
 Install NPM, it is included with Node.js ([Download](https://nodejs.org/en/))
 
+## Testing the module locally
+
+1. Clone this repository
+
+```shell
+git clone https://github.com/ONSdigital/registers-react-library.git
+```
+
+2. Install the local `registers-react-library` module
+
+```shell
+npm install --save /path/to/registers-react-library
+```
+
+3. Import the component you want to use
+
+```javascript
+import { Button } from 'registers-react-library';
+
+<Button
+  id="logoutButton"
+  size="thin"
+  text="Logout"
+  onClick={() => alert('Clicked logout button...')}
+  ariaLabel="Logout Button"
+  type="submit"
+/>
+```
+
+4. When you make changes to `registers-react-library`, make sure you run the `npm install` command from step 2 again.
+
 ## Running the Storybook
 
 ```shell
 npm run storybook
 ```
+
+You can access the storybook at [localhost:9001](http://localhost:9001).
 
 ## Deploy the Storybook to Github Pages
 
