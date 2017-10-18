@@ -1,6 +1,6 @@
 {
   "name": "registers-react-library",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "A library of React components for ONS registers projects, using the external ONS pattern library.",
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
     "mocha": "--require scripts/mocha_runner src/**/__tests__/**/*.js"
   },
   "scripts": {
-    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook": "start-storybook -p 9009 -c .storybook",
     "build-storybook": "build-storybook -c .storybook -o .out",
     "deploy-storybook": "storybook-to-ghpages",
     "prepublish": "./node_modules/.bin/babel --plugins transform-es2015-modules-umd src --ignore __tests__ --out-dir ./dist",
@@ -47,7 +47,7 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-2": "^6.5.0",
     "chai": "^3.5.0",
-    "coveralls": "^3.0.0",
+    "coveralls": "2.11.16",
     "enzyme": "^2.2.0",
     "eslint": "^3.0.0",
     "eslint-config-airbnb": "^15.0.1",
@@ -68,7 +68,10 @@
     "react-dom": "~0.14.8 || ^15.0.0"
   },
   "dependencies": {
-    "babel-runtime": "^6.6.1"
+    "babel-runtime": "^6.6.1",
+    "prop-types": "^15.6.0",
+    "react-router": "^2.6.1",
+    "halogen": "^0.2.0"
   },
   "eslintConfig": {
     "extends": "./node_modules/react-scripts/config/eslint.js",
