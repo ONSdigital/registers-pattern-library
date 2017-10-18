@@ -4,8 +4,6 @@ import { expect } from 'chai';
 import sinon from 'sinon';
 import BreadCrumb from '../components/BreadCrumb';
 
-// Demo tests
-
 // Shallow Rendering
 // https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md
 describe('BreadCrumb - Shallow Rendering', () => {

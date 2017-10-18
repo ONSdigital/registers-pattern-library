@@ -4,8 +4,6 @@ import { expect } from 'chai';
 import sinon from 'sinon';
 import Footer from '../components/Footer';
 
-// Demo tests
-
 // Shallow Rendering
 // https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md
 describe('Footer - Shallow Rendering', () => {
