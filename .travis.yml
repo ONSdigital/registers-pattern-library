@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+- '8'
+install:
+- npm install
+script:
+- npm test
+after_success:
+- npm run coverage
+cache:
+  directories:
+  - node_modules
+deploy:
+  on:
+    branch: master
+  skip_cleanup: true
+  provider: npm
+  email: Tom.Cooling@ons.gov.uk
+  api_key:
+    secure: Ol+7jfT93tsZ9F2BJF2vgnwPXjLf25Iimrma/rBNJ3xFjCnz7q3FM+qSAK3/4mHrcsVAo5lstjWgOZywpKu6zVAmVTRax0wr2OKXwB0Z4tgewgTHZBEX4A/kUhoQk6w8hdolsXNDKORBN3JPL050G/i3ciYogcLd74a46nEuU6srBsZLmR2ESzfJrxwWkBnfCd6QTQqyCT0r9gVfyLBwId+7w+m6kTA83tuqSRpkkFWy58/+jkD34rFyMi8tFh3vd7kYlsKyy7TTmrd3/GeyOpZPs4uoqc4wbwTa2AXhowwCxO906oDfHUVGzmmCZZbfAvcyZoetN/ZJLNKF+Kil7UD3eq9g9Oe7taCkHhEDGdHAHC6biwU7HkgJmJR3H5en4fmLQHR00I4D677YOgM3Xpft5OZL380xPdkNipF/2UpFFdjLbOBJHHhsmJ/JifiINjaXAaAEqK3+9rPYh0PMCVHK7Xv981vTf7MVNSm7wfBSPlDfwbugW7KUM5ILoXhaWTydkzQpcSWsQ28ykUyX4lxhjFQorDHuGy/zbiik3CbsgiFpqk4hx9i4BCistukN1aZDmyN3Oc1HadJMNriQKYn63UGRIsEwOr/+nouwqfZvozCWWk7TR8FhBczSarayQkEI9l5/ITRKFIPuvmYJZgy7vZbZNXiyZuuwKNWmbJ8=
