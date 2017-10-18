@@ -32,8 +32,8 @@ class Banner extends React.Component {
       },
     };
     return (
-      <div style={style.banner}>
-        <div style={style.banner}>
+      <div id="banner" style={style.banner}>
+        <div id="innerBanner" style={style.banner}>
           <div className="container">
             <p style={style.p}>
               <strong style={style.bannerTag}>
