@@ -8,19 +8,29 @@ React library for common components across Registers user interfaces. We have ta
 
 ## Using this Module
 
-1. Install the module using NPM.
+1. Import the ONS CSS in your `index.html`
+
+```html
+<head>
+...
+<link rel="stylesheet" type="text/css" href="https://cdn.ons.gov.uk/sixteens/1f354a7/css/main.css">
+...
+</head>
+```
+
+2. Install the module using NPM.
 
 ```shell
 npm install --save registers-react-library
 ```
 
-2. Import the component you want to use.
+3. Import the component you want to use.
 
 ```javascript
 import { Button } from 'registers-react-library';
 ```
 
-3. Check the [storybook](https://onsdigital.github.io/registers-react-library) for details of what props to pass in.
+4. Check the [storybook](https://onsdigital.github.io/registers-react-library) for details of what props to pass in.
 
 ## Environment Setup
 
