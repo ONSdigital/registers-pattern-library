@@ -57,7 +57,7 @@ describe('BreadCrumb - Full DOM Rendering', () => {
 
   it('calls componentDidMount', () => {
     sinon.spy(BreadCrumb.prototype, 'componentDidMount');
-    const wrapper = mount(
+    mount(
       <BreadCrumb
         breadCrumbItems={[
           { name: 'Home', link: '/Home' },

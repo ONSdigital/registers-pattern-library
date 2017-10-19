@@ -83,7 +83,7 @@ describe('NavBar - Full DOM Rendering', () => {
 
   it('calls componentDidMount', () => {
     sinon.spy(NavBar.prototype, 'componentDidMount');
-    const wrapper = mount(
+    mount(
       <NavBar
         primary="/Home"
         navBarItems={[

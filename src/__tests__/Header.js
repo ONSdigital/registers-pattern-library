@@ -105,7 +105,7 @@ describe('Header - Full DOM Rendering', () => {
 
   it('calls componentDidMount', () => {
     sinon.spy(Header.prototype, 'componentDidMount');
-    const wrapper = mount(
+    mount(
       <Header
         showHeaderItems
         imageUrl="/Home"
