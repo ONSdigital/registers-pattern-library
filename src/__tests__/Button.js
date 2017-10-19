@@ -87,7 +87,7 @@ describe('Button - Full DOM Rendering', () => {
 
   it('calls componentDidMount', () => {
     sinon.spy(Button.prototype, 'componentDidMount');
-    const wrapper = mount(
+    mount(
       <Button
         id="loginButton"
         size="wide"

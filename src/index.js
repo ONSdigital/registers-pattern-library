@@ -6,13 +6,12 @@ import Banner from './components/Banner';
 import Button from './components/Button';
 import TitleAndDescription from './components/TitleAndDescription';
 
-
 export {
-    Banner,
-    BreadCrumb,
-    Button,
-    Footer,
-    Header,
-    NavBar,
-    TitleAndDescription,
+  Banner,
+  BreadCrumb,
+  Button,
+  Footer,
+  Header,
+  NavBar,
+  TitleAndDescription,
 };

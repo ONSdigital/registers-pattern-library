@@ -69,7 +69,7 @@ describe('Footer - Full DOM Rendering', () => {
 
   it('calls componentDidMount', () => {
     sinon.spy(Footer.prototype, 'componentDidMount');
-    const wrapper = mount(
+    mount(
       <Footer
         footerSection={[
           { title: 'Help', items: [{ text: 'Accessibility', link: '/Accessibility' }, { text: 'Search History', link: '/SearchHistory' }] },

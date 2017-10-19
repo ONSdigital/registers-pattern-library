@@ -45,7 +45,7 @@ describe('Banner - Full DOM Rendering', () => {
 
   it('calls componentDidMount', () => {
     sinon.spy(Banner.prototype, 'componentDidMount');
-    const wrapper = mount(
+    mount(
       <Banner
         text="ALPHA"
         message="this release is still in development."

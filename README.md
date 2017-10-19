@@ -1,7 +1,6 @@
 # registers-react-library
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b7a4dfb80de74e6e9ffee7a649ea930a)](https://www.codacy.com/app/ONSDigital/registers-react-library?utm_source=github.com&utm_medium=referral&utm_content=ONSdigital/registers-react-library&utm_campaign=badger)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](./LICENSE) [![Build Status](https://travis-ci.org/ONSdigital/registers-react-library.svg?branch=develop)](https://travis-ci.org/ONSdigital/registers-react-library) [![Coverage Status](https://coveralls.io/repos/github/ONSdigital/registers-react-library/badge.svg?branch=develop)](https://coveralls.io/github/ONSdigital/registers-react-library?branch=develop) [![Dependency Status](https://www.versioneye.com/user/projects/59e49c0d0fb24f213b61dc12/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59e49c0d0fb24f213b61dc12) [![npm version](https://badge.fury.io/js/registers-react-library.svg)](https://badge.fury.io/js/registers-react-library)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](./LICENSE) [![Build Status](https://travis-ci.org/ONSdigital/registers-react-library.svg?branch=develop)](https://travis-ci.org/ONSdigital/registers-react-library) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b7a4dfb80de74e6e9ffee7a649ea930a)](https://www.codacy.com/app/ONSDigital/registers-react-library?utm_source=github.com&utm_medium=referral&utm_content=ONSdigital/registers-react-library&utm_campaign=badger) [![Coverage Status](https://coveralls.io/repos/github/ONSdigital/registers-react-library/badge.svg?branch=develop)](https://coveralls.io/github/ONSdigital/registers-react-library?branch=develop) [![Dependency Status](https://www.versioneye.com/user/projects/59e49c0d0fb24f213b61dc12/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59e49c0d0fb24f213b61dc12) [![npm version](https://badge.fury.io/js/registers-react-library.svg)](https://badge.fury.io/js/registers-react-library)
 
 React library for common components across Registers user interfaces. We have taken some of the external ONS patterns from the [ons-pattern-library-starter](http://onsdigital.github.io/ons-pattern-library-starter/) repository and wrapped them in dynamic React components.
 
@@ -9,19 +8,29 @@ React library for common components across Registers user interfaces. We have ta
 
 ## Using this Module
 
-1. Install the module using NPM.
+1. Import the ONS CSS in your `index.html`
+
+```html
+<head>
+...
+<link rel="stylesheet" type="text/css" href="https://cdn.ons.gov.uk/sixteens/1f354a7/css/main.css">
+...
+</head>
+```
+
+2. Install the module using NPM.
 
 ```shell
 npm install --save registers-react-library
 ```
 
-2. Import the component you want to use.
+3. Import the component you want to use.
 
 ```javascript
 import { Button } from 'registers-react-library';
 ```
 
-3. Check the [storybook](https://onsdigital.github.io/registers-react-library) for details of what props to pass in.
+4. Check the [storybook](https://onsdigital.github.io/registers-react-library) for details of what props to pass in.
 
 ## Environment Setup
 
