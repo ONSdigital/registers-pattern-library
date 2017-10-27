@@ -42,18 +42,6 @@ describe('Banner - Full DOM Rendering', () => {
     wrapper.setProps({ bar: 'foo' });
     expect(wrapper.props().bar).to.equal('foo');
   });
-
-  it('calls componentDidMount', () => {
-    sinon.spy(Banner.prototype, 'componentDidMount');
-    mount(
-      <Banner
-        text="ALPHA"
-        message="this release is still in development."
-      />,
-    );
-    expect(Banner.prototype.componentDidMount.calledOnce).to.be.true;
-    Banner.prototype.componentDidMount.restore();
-  });
 });
 
 // Static Rendered Markup

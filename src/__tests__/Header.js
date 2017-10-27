@@ -102,18 +102,6 @@ describe('Header - Full DOM Rendering', () => {
     wrapper.setProps({ bar: 'foo' });
     expect(wrapper.props().bar).to.equal('foo');
   });
-
-  it('calls componentDidMount', () => {
-    sinon.spy(Header.prototype, 'componentDidMount');
-    mount(
-      <Header
-        showHeaderItems
-        imageUrl="/Home"
-      />,
-    );
-    expect(Header.prototype.componentDidMount.calledOnce).to.be.true;
-    Header.prototype.componentDidMount.restore();
-  });
 });
 
 // Static Rendered Markup
