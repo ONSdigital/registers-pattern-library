@@ -6,6 +6,17 @@ React library for common components across Registers user interfaces. We have ta
 
 [This](https://myappincome.co.uk/how-to-create-local-npm-package-of-react-components/) tutorial was used to help setup up the project.
 
+### Table of Contents
+**[1. Using this Module](#using-this-module)**<br>
+**[2. Environment Setup](#environment-setup)**<br>
+**[3. Testing the module locally](#testing-the-module-locally)**<br>
+**[4. Running the storybook](#running-the-storybook)**<br>
+**[5. Deploy the Storybook to Github Pages](#deploy-the-storybook-to-github-pages)**<br>
+**[6. Testing](#testing)**<br>
+**[7. Linting](#linting)**<br>
+**[8. Contributing](#contributing)**<br>
+**[9. License](#license)**<br>
+
 ## Using this Module
 
 1. Import the ONS CSS in your `index.html`
