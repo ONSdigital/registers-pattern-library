@@ -2,25 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Loader from 'halogen/PulseLoader';
 
-class Button extends React.Component {
-  componentDidMount() {
-    // some logic here - we only test if the method is called
-  }
-  render() {
-    const spinner = (<Loader id="spinner" color="#FFFFFF" size="8px" margin="0px" />);
-    return (
-      <button
-        className={`btn btn--primary btn--${this.props.size}`}
-        id={this.props.id}
-        aria-label={this.props.ariaLabel}
-        onClick={this.props.loading ? null : this.props.onClick}
-        type={this.props.type}
-      >
-        {this.props.loading ? spinner : this.props.text}
-      </button>
-    );
-  }
-}
+const Button = ({ size, id, ariaLabel, loading, onClick, text, type }) => {
+  const spinner = (<Loader id="spinner" color="#FFFFFF" size="8px" margin="0px" />);
+  return (
+    <button
+      className={`btn btn--primary btn--${size}`}
+      id={id}
+      aria-label={ariaLabel}
+      onClick={loading ? null : onClick}
+      type={type}
+    >
+      {loading ? spinner : text}
+    </button>
+  );
+};
 
 Button.defaultProps = {
   loading: false,

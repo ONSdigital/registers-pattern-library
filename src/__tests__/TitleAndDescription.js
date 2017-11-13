@@ -68,19 +68,6 @@ describe('TitleAndDescription - Full DOM Rendering', () => {
     wrapper.setProps({ bar: 'foo' });
     expect(wrapper.props().bar).to.equal('foo');
   });
-
-  it('calls componentDidMount', () => {
-    sinon.spy(TitleAndDescription.prototype, 'componentDidMount');
-    const wrapper = mount(
-      <TitleAndDescription
-        title="Accessibility"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at lectus dapibus, interdum massa in, vehicula augue. Ut non congue elit. Donec eget imperdiet nulla, vel tincidunt metus. Nunc tempus lectus id volutpat ornare. Quisque auctor massa ante, vitae viverra ipsum rhoncus nec. Morbi non lectus varius, iaculis augue vel, laoreet arcu. Vivamus rutrum congue tempus. Duis turpis massa, viverra id mattis eget, auctor id augue. Sed luctus at nisl nec posuere. Praesent eu varius sem. Morbi elementum mauris id ligula pulvinar, sed iaculis ipsum luctus."
-        marginBottom={1}
-      />,
-    );
-    expect(TitleAndDescription.prototype.componentDidMount.calledOnce).to.be.true;
-    TitleAndDescription.prototype.componentDidMount.restore();
-  });
 });
 
 // Static Rendered Markup
