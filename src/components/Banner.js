@@ -5,7 +5,7 @@ const Banner = ({ backgroundColour, message, text }) => {
   const style = {
     banner: {
       marginTop: '-20px',
-      width: '100vw',
+      width: '100%',
       backgroundColor: backgroundColour,
       color: '#fff',
       boxSizing: 'border-box',
