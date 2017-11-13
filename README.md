@@ -43,6 +43,19 @@ import { Button } from 'registers-react-library';
 
 4. Check the [storybook](https://onsdigital.github.io/registers-react-library) for details of what props to pass in.
 
+Example props:
+
+```javascript
+<Button
+  id="logoutButton"
+  size="thin"
+  text="Logout"
+  onClick={() => alert('Clicked logout button...')}
+  ariaLabel="Logout Button"
+  type="submit"
+/>
+```
+
 ## Environment Setup
 
 Install NPM, it is included with Node.js ([Download](https://nodejs.org/en/))
