@@ -80,22 +80,6 @@ describe('NavBar - Full DOM Rendering', () => {
     wrapper.setProps({ bar: 'foo' });
     expect(wrapper.props().bar).to.equal('foo');
   });
-
-  it('calls componentDidMount', () => {
-    sinon.spy(NavBar.prototype, 'componentDidMount');
-    const wrapper = mount(
-      <NavBar
-        primary="/Home"
-        navBarItems={[
-          { text: 'Home', link: '/Home' },
-          { text: 'Search', link: '/Search' },
-          { text: 'Unit Search', link: '/RefSearch', items: [{ text: 'Enterprise', link: '/Enterprise' }, { text: 'Legal Unit', link: '/LegalUnit' }, { text: 'VAT', link: '/VAT' }] },
-        ]}
-      />,
-    );
-    expect(NavBar.prototype.componentDidMount.calledOnce).to.be.true;
-    NavBar.prototype.componentDidMount.restore();
-  });
 });
 
 // Static Rendered Markup

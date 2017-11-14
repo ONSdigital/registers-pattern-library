@@ -84,22 +84,6 @@ describe('Button - Full DOM Rendering', () => {
     wrapper.setProps({ bar: 'foo' });
     expect(wrapper.props().bar).to.equal('foo');
   });
-
-  it('calls componentDidMount', () => {
-    sinon.spy(Button.prototype, 'componentDidMount');
-    const wrapper = mount(
-      <Button
-        id="loginButton"
-        size="wide"
-        text="Login"
-        onClick={() => alert('Clicked login button...')}
-        ariaLabel="Login Button"
-        type="submit"
-      />,
-    );
-    expect(Button.prototype.componentDidMount.calledOnce).to.be.true;
-    Button.prototype.componentDidMount.restore();
-  });
 });
 
 // Static Rendered Markup

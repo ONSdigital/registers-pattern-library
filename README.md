@@ -1,26 +1,60 @@
 # registers-react-library
 
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](./LICENSE) [![Build Status](https://travis-ci.org/ONSdigital/registers-react-library.svg?branch=develop)](https://travis-ci.org/ONSdigital/registers-react-library) [![Coverage Status](https://coveralls.io/repos/github/ONSdigital/registers-react-library/badge.svg?branch=develop)](https://coveralls.io/github/ONSdigital/registers-react-library?branch=develop) [![Dependency Status](https://www.versioneye.com/user/projects/59e49c0d0fb24f213b61dc12/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59e49c0d0fb24f213b61dc12) [![npm version](https://badge.fury.io/js/registers-react-library.svg)](https://badge.fury.io/js/registers-react-library)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](./LICENSE) [![Build Status](https://travis-ci.org/ONSdigital/registers-react-library.svg?branch=develop)](https://travis-ci.org/ONSdigital/registers-react-library) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b7a4dfb80de74e6e9ffee7a649ea930a)](https://www.codacy.com/app/ONSDigital/registers-react-library?utm_source=github.com&utm_medium=referral&utm_content=ONSdigital/registers-react-library&utm_campaign=badger) [![Coverage Status](https://coveralls.io/repos/github/ONSdigital/registers-react-library/badge.svg?branch=develop)](https://coveralls.io/github/ONSdigital/registers-react-library?branch=develop) [![Dependency Status](https://www.versioneye.com/user/projects/59e49c0d0fb24f213b61dc12/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59e49c0d0fb24f213b61dc12) [![npm version](https://badge.fury.io/js/registers-react-library.svg)](https://badge.fury.io/js/registers-react-library)
 
 React library for common components across Registers user interfaces. We have taken some of the external ONS patterns from the [ons-pattern-library-starter](http://onsdigital.github.io/ons-pattern-library-starter/) repository and wrapped them in dynamic React components.
 
 [This](https://myappincome.co.uk/how-to-create-local-npm-package-of-react-components/) tutorial was used to help setup up the project.
 
+### Table of Contents
+**[1. Using this Module](#using-this-module)**<br>
+**[2. Environment Setup](#environment-setup)**<br>
+**[3. Testing the module locally](#testing-the-module-locally)**<br>
+**[4. Running the storybook](#running-the-storybook)**<br>
+**[5. Deploy the Storybook to Github Pages](#deploy-the-storybook-to-github-pages)**<br>
+**[6. Testing](#testing)**<br>
+**[7. Linting](#linting)**<br>
+**[8. Contributing](#contributing)**<br>
+**[9. License](#license)**<br>
+
 ## Using this Module
 
-1. Install the module using NPM.
+1. Import the ONS CSS in your `index.html`
+
+```html
+<head>
+...
+<link rel="stylesheet" type="text/css" href="https://cdn.ons.gov.uk/sixteens/1f354a7/css/main.css">
+...
+</head>
+```
+
+2. Install the module using NPM.
 
 ```shell
 npm install --save registers-react-library
 ```
 
-2. Import the component you want to use.
+3. Import the component you want to use.
 
 ```javascript
 import { Button } from 'registers-react-library';
 ```
 
-3. Check the [storybook](https://onsdigital.github.io/registers-react-library) for details of what props to pass in.
+4. Check the [storybook](https://onsdigital.github.io/registers-react-library) for details of what props to pass in.
+
+Example props:
+
+```javascript
+<Button
+  id="logoutButton"
+  size="thin"
+  text="Logout"
+  onClick={() => alert('Clicked logout button...')}
+  ariaLabel="Logout Button"
+  type="submit"
+/>
+```
 
 ## Environment Setup
 

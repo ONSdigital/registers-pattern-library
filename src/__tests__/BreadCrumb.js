@@ -54,20 +54,6 @@ describe('BreadCrumb - Full DOM Rendering', () => {
     wrapper.setProps({ bar: 'foo' });
     expect(wrapper.props().bar).to.equal('foo');
   });
-
-  it('calls componentDidMount', () => {
-    sinon.spy(BreadCrumb.prototype, 'componentDidMount');
-    const wrapper = mount(
-      <BreadCrumb
-        breadCrumbItems={[
-          { name: 'Home', link: '/Home' },
-          { name: 'Enterprise', link: '' },
-        ]}
-      />,
-    );
-    expect(BreadCrumb.prototype.componentDidMount.calledOnce).to.be.true;
-    BreadCrumb.prototype.componentDidMount.restore();
-  });
 });
 
 // Static Rendered Markup

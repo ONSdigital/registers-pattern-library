@@ -66,21 +66,6 @@ describe('Footer - Full DOM Rendering', () => {
     wrapper.setProps({ bar: 'foo' });
     expect(wrapper.props().bar).to.equal('foo');
   });
-
-  it('calls componentDidMount', () => {
-    sinon.spy(Footer.prototype, 'componentDidMount');
-    const wrapper = mount(
-      <Footer
-        footerSection={[
-          { title: 'Help', items: [{ text: 'Accessibility', link: '/Accessibility' }, { text: 'Search History', link: '/SearchHistory' }] },
-          { title: 'About SBR', items: [{ text: 'What is SBR', link: '/WhatIsSbr' }] },
-          { title: 'Connect with us', items: [{ text: 'statistical.business.register@ons.gov.uk', emailHref: 'mailto:statistical.business.register@ons.gov.uk?subject=SBR&body=message%20goes%20here' }] },
-        ]}
-      />,
-    );
-    expect(Footer.prototype.componentDidMount.calledOnce).to.be.true;
-    Footer.prototype.componentDidMount.restore();
-  });
 });
 
 // Static Rendered Markup
