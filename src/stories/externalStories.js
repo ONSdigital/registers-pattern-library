@@ -8,7 +8,7 @@ import BreadCrumb from '../components/external/BreadCrumb';
 import Button from '../components/external/Button';
 import Banner from '../components/external/Banner';
 import TitleAndDescription from '../components/external/TitleAndDescription';
-import './ons_css.css';
+import './css/external_ons_css.css';
 
 storiesOf('Full Page Examples (External)', module)
   .add('full page', withInfo()(() => {
