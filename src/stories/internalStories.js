@@ -78,7 +78,7 @@ storiesOf('Select Multiple Input (Internal)', module)
       D: 'Dormant',
       I: 'Insolvent',
     }}
-    onChange={() => alert('Switch Page...')}
+    onChange={() => alert('Selection Made')}
   />),
   ));
 
