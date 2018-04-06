@@ -35,18 +35,7 @@ storiesOf('Button (Internal)', module)
       ariaLabel="Login Button"
       type="submit"
     />),
-  ))
-  
-  .add('Blue Button', withInfo()(() =>
-    (<Button
-      id="loginButton"
-      size="thin"
-      text="This Button Should Be Blue"
-      onClick={() => alert('Still not blue...')}
-      ariaLabel="Login Button"
-      type="submit"
-    />),
-    ));
+  ));
 
 storiesOf('Link Button (Internal)', module)
   .add('Normal Link Button', withInfo()(() =>
