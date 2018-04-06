@@ -7,7 +7,7 @@ import Pagination from '../../components/internal/Pagination';
     // Shallow Rendering
     // https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md
 describe('Pagination - Shallow Rendering', () => {
-    it('to have 1 Pagination class', () => {
+    it('to have the correct number of Pagination classes', () => {
       const wrapper = shallow(
         <Pagination
           onChange={() => alert('Switch Page...')}
@@ -23,7 +23,7 @@ describe('Pagination - Shallow Rendering', () => {
   // Static Rendered Markup
   // https://github.com/airbnb/enzyme/blob/master/docs/api/render.md
 describe('Pagination - Static Rendered Markup', () => {
-    it('renders the Pagination', () => {
+    it('renders the correct number of items?', () => {
       const wrapper = render(
         <Pagination
           onChange={() => alert('Switch Page...')}
