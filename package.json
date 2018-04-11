@@ -69,9 +69,11 @@
   },
   "dependencies": {
     "babel-runtime": "^6.6.1",
+    "halogen": "^0.2.0",
+    "performance-now": "^2.1.0",
     "prop-types": "^15.6.0",
     "react-router": "^2.6.1",
-    "halogen": "^0.2.0"
+    "react-select": "^1.2.1"
   },
   "eslintConfig": {
     "extends": "./node_modules/react-scripts/config/eslint.js",
