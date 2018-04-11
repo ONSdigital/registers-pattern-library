@@ -4,6 +4,10 @@ import { expect } from 'chai';
 import sinon from 'sinon';
 import SelectMultipleInput from '../../components/internal/SelectMultipleInput';
 
+//-----------------------
+//This test doesn't work
+//-----------------------
+
 // Shallow Rendering
 // https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md
 describe('SelectMultipleInput - Shallow Rendering', () => {
