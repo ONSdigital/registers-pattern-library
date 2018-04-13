@@ -18,6 +18,18 @@ describe('TextInputRange - Shallow Rendering', () => {
       );
       expect(wrapper.find('.field')).to.have.length(1);
     });
+
+    it('to have two inputs', () => {
+      const wrapper = shallow(
+        <TextInputRange
+          id="id"
+          label="Input Text"
+          size="26262"
+          toggleText="Two Inputs?"
+        />,
+      );
+      expect(wrapper.find('.input')).to.have.length(2);
+    });
 });
 
   // Static Rendered Markup

@@ -63,6 +63,23 @@ describe('Button - Shallow Rendering', () => {
     );
     expect(wrapper.find('#spinner')).to.have.length(1);
   });
+
+  it('to check if the onClick method runs when loading spinner is showing', () => {
+    const onButtonClick = sinon.spy();
+    const wrapper = shallow(
+      <Button
+        iid="loginButton"
+        size="wide"
+        text="Login"
+        onClick={onButtonClick}
+        ariaLabel="Login Button"
+        type="submit"
+        loading
+      />,
+    );
+    wrapper.find('button').simulate('click');
+    expect(onButtonClick.calledOnce).to.equal(false);
+  });
 });
 
 // Full DOM Rendering
@@ -83,6 +100,23 @@ describe('Button - Full DOM Rendering', () => {
     expect(wrapper.props().loading).to.equal(true);
     wrapper.setProps({ bar: 'foo' });
     expect(wrapper.props().bar).to.equal('foo');
+  });
+
+  it('to should handle click event', () => {
+    const onButtonClick = sinon.spy();
+    const wrapper = shallow(
+      <Button
+        id="loginButton"
+        size="wide"
+        text="Login"
+        onClick={onButtonClick}
+        ariaLabel="Login Button"
+        type="submit"
+        loading={false}
+      />,
+    );
+    wrapper.find('button').simulate('click');
+    expect(onButtonClick.calledOnce).to.equal(true);
   });
 });
 
