@@ -132,6 +132,7 @@ describe('Button - Static Rendered Markup', () => {
         onClick={() => alert('Clicked login button...')}
         ariaLabel="Login Button"
         type="submit"
+        classname="btn"
       />,
     );
     expect(wrapper.find('.btn').length).to.equal(1);
