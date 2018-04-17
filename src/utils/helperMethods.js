@@ -1,4 +1,38 @@
 import React from 'react';
+import { employmentBands, legalStatusBands, tradingStatusBands, turnoverBands } from './convertBands';
+
+/**
+ * @const _pipe - Given two functions, f and g and curried arguments (...args), pass
+ * the result of f(...args) into g, returning the resulting function
+ *
+ * @param {function} f - The first function
+ * @param {function} g - The second function
+ *
+ * @return {function} - Return a function composition of calling g with the result
+ * of f(...args)
+ */
+const _pipe = (f, g) => (...args) => g(f(...args));
+
+/**
+ * @const pipe - Given any number of functions, run those functions on a curried
+ * input.
+ *
+ * e.g. pipe(addOne, multiplyBy5)(2)
+ *
+ * The above will return 15 (assuming addOne and multiplyBy5 are implemented)
+ *
+ * @param {function} fns - Any number of functions
+ *
+ * @return {Any} - The result of running the provided functions on an argument
+ */
+const pipe = (...fns) => fns.reduce(_pipe);
+
+// Below are immutable transformations on a business object to convert the bands
+const convertLegalStatus = (x) => ({ ...x, legalStatus: legalStatusBands[x.legalStatus] });
+const convertTradingStatus = (x) => ({ ...x, tradingStatus: tradingStatusBands[x.tradingStatus] });
+const convertTurnover = (x) => ({ ...x, turnover: turnoverBands[x.turnover] });
+const convertEmploymentBands = (x) => ({ ...x, employmentBands: employmentBands[x.employmentBands] });
+
 
 /**
  * @const maxSize - Given any number of arrays, return the size of the largest
@@ -8,6 +42,18 @@ import React from 'react';
  * @return {Number} - The size of the largest array
  */
 const maxSize = (...args) => args.reduce((a, b) => (b.length > a ? b.length : a), 0);
+
+
+/**
+ * @const numberWithCommas - Make a number more human readable
+ *
+ * Source: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
+ *
+ * @param {Number} x - The number to add commas to
+ *
+ * @return {String}
+ */
+const numberWithCommas = (x) => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
 
 /**
@@ -139,5 +185,6 @@ const anyKeyEmpty = (obj) => Object.keys(obj).map(key => (obj[key] === '')).redu
 
 export {
   formatData, handleFormChange, formSelectJson, getHighlightedText,
-  everyKeyMatches, anyKeyEmpty, maxSize,
+  everyKeyMatches, anyKeyEmpty, maxSize, numberWithCommas, pipe,
+  convertLegalStatus, convertTradingStatus, convertTurnover, convertEmploymentBands,
 };
