@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Select from 'react-select';
 import 'react-select/dist/react-select.min.css';
-import { formSelectJson } from '../utils/helperMethods';
+import { formSelectJson } from '../../utils/helperMethods';
 
 /**
  * @class SelectMultipleInput - This provides a select input where multiple
