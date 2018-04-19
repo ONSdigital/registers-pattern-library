@@ -7,39 +7,38 @@ import LinkButton from '../../components/internal/LinkButton';
 // Shallow Rendering
 // https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md
 describe('LinkButton - Shallow Rendering', () => {
-    it('to have 1 LinkButton class', () => {
-      const wrapper = shallow(
-        <LinkButton
-          id="LinkButton"
-          text="This is the link"
-          className="LinkClass"
-        />,
-      );
-      expect(wrapper.find('.LinkClass')).to.have.length(1);
-    });
+  it('to have 1 LinkButton class', () => {
+    const wrapper = shallow(
+      <LinkButton
+        id="LinkButton"
+        text="This is the link"
+        className="LinkClass"
+      />,
+    );
+    expect(wrapper.find('.LinkClass')).to.have.length(1);
+  });
 
-    it('to have the correct text', () => {
-      const wrapper = shallow(
-        <LinkButton
-          id="LinkButton"
-          text="This is the link"
-          className="LinkClass"
-        />,
-      );
-      expect(wrapper.text()).to.equal('This is the link');
-    });
-});
-
-it('to show the loading spinner', () => {
-  const wrapper = shallow(
-    <LinkButton
-      id="LinkButton"
-      text="This is the link"
-      className="LinkClass"
-      loading
-    />,
-  );
-  expect(wrapper.find('#spinner')).to.have.length(1);
+  it('to have the correct text', () => {
+    const wrapper = shallow(
+      <LinkButton
+        id="LinkButton"
+        text="This is the link"
+        className="LinkClass"
+      />,
+    );
+    expect(wrapper.text()).to.equal('This is the link');
+  });
+  
+  it('to show the loading spinner', () => {
+    const wrapper = shallow(
+      <LinkButton
+        id="LinkButton"
+        text="This is the link"
+        className="LinkClass"
+        loading
+      />,
+    );
+    expect(wrapper.find('#spinner')).to.have.length(1);
 });
 
 // Full DOM Rendering

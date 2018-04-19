@@ -12,7 +12,7 @@ describe('TextInputRange - Shallow Rendering', () => {
         <TextInputRange
           id="id"
           label="Input Text"
-          size="26262"
+          size="u-mb-s"
           toggleText="Two Inputs?"
         />,
       );
@@ -24,7 +24,7 @@ describe('TextInputRange - Shallow Rendering', () => {
         <TextInputRange
           id="id"
           label="Input Text"
-          size="26262"
+          size="u-mb-s"
           toggleText="Two Inputs?"
         />,
       );
@@ -40,7 +40,7 @@ describe('TextInputRange - Static Rendered Markup', () => {
         <TextInputRange
           id="id"
           label="Input Text"
-          size="26262"
+          size="u-mb-s"
           toggleText="Two Inputs?"
         />,
       );

@@ -19,19 +19,3 @@ describe('Pagination - Shallow Rendering', () => {
       expect(wrapper.find('.mars')).to.have.length(2);
     });
 });
-
-  // Static Rendered Markup
-  // https://github.com/airbnb/enzyme/blob/master/docs/api/render.md
-describe('Pagination - Static Rendered Markup', () => {
-    it('renders the correct number of items?', () => {
-      const wrapper = render(
-        <Pagination
-          onChange={() => alert('Switch Page...')}
-          page={3}
-          pagesize={4}
-          numPages={6}
-        />,
-      );
-      expect(wrapper.find('.mars').length).to.equal(2);
-    });
-});
