@@ -47,15 +47,6 @@ storiesOf('Full Page Examples (Internal)', module)
     //       close={() => 1}
     //       show
     //     />
-
-
-
-
-
-
-
-
-
     //     <FooterInternal />
     //   </div>
     // );
@@ -96,17 +87,17 @@ storiesOf('Full Page Examples (Internal)', module)
           </div>
         </header>
         <section>
-        <div className="main-content">
-          <div className="wrapper">
-            <div className="group">
-              <div className="col-12">
-                <form id="form-sign-in" className="form">
-                  <h3 className="saturn">Page Content</h3>
-                </form>
+          <div className="main-content">
+            <div className="wrapper">
+              <div className="group">
+                <div className="col-12">
+                  <form id="form-sign-in" className="form">
+                    <h3 className="saturn">Page Content</h3>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         </section>
         <FooterInternal />
       </section>
@@ -152,18 +143,18 @@ storiesOf('Button (Internal)', module)
       type="submit"
     />),
   ))
-    .add('Button with loading spinner', withInfo()(() => {
-      return (<Button
-        id="loginButton"
-        className="btn btn--primary venus btn--wide"
-        size="wide"
-        text="Login"
-        onClick={() => alert('Clicked login button...')}
-        ariaLabel="Login Button"
-        type="submit"
-        loading
-      />);
-    }));
+  .add('Button with loading spinner', withInfo()(() => {
+    return (<Button
+      id="loginButton"
+      className="btn btn--primary venus btn--wide"
+      size="wide"
+      text="Login"
+      onClick={() => alert('Clicked login button...')}
+      ariaLabel="Login Button"
+      type="submit"
+      loading
+    />);
+  }));
 
 storiesOf('Link Button (Internal)', module)
   .add('Link Button', withInfo()(() => {
@@ -194,25 +185,25 @@ storiesOf('Pagination (Internal)', module)
 
 storiesOf('Select Multiple Input (Internal)', module)
   .add('Select Multiple Input', withInfo()(() =>
-  (<SelectMultipleInput
-    id="SelectMultipleInput"
-    label="Trading Status Bands"
-    size="42"
-    bands={tradingStatusBands}
-    onChange={() => alert('Selection Made')}
-    labelClass="label neptune"
-  />),
+    (<SelectMultipleInput
+      id="SelectMultipleInput"
+      label="Trading Status Bands"
+      size="42"
+      bands={tradingStatusBands}
+      onChange={() => alert('Selection Made')}
+      labelClass="label neptune"
+    />),
   ));
 
 storiesOf('Text Input (Internal)', module)
   .add('Text Input', withInfo()(() =>
-  (<TextInput
-    id="id"
-    type="type"
-    label="Input"
-    size="size"
-    labelClass="label neptune"
-  />),
+    (<TextInput
+      id="id"
+      type="type"
+      label="Input"
+      size="size"
+      labelClass="label neptune"
+    />),
   ));
 
 storiesOf('Text Input Range (Internal)', module)
