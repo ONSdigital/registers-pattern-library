@@ -16,7 +16,8 @@ describe('LinkButton - Shallow Rendering', () => {
       />,
     );
     expect(wrapper.find('.LinkClass')).to.have.length(1);
-  });
+  })
+});
 
   it('to have the correct text', () => {
     const wrapper = shallow(

@@ -16,6 +16,7 @@ describe('Button - Shallow Rendering', () => {
         onClick={() => alert('Clicked login button...')}
         ariaLabel="Login Button"
         type="submit"
+        className="btn btn--primary venus btn--wide"
       />,
     );
     expect(wrapper.find('.btn')).to.have.length(1);
@@ -25,14 +26,15 @@ describe('Button - Shallow Rendering', () => {
     const wrapper = shallow(
       <Button
         id="loginButton"
-        size="thin"
+        size="wide"
         text="Login"
         onClick={() => alert('Clicked login button...')}
         ariaLabel="Login Button"
         type="submit"
+        className="btn btn--primary venus btn--wide"
       />,
     );
-    expect(wrapper.find('.btn').hasClass('btn--thin')).to.equal(true);
+    expect(wrapper.find('.btn').hasClass('btn--wide')).to.equal(true);
   });
 
   it('to have the correct text', () => {
@@ -132,7 +134,7 @@ describe('Button - Static Rendered Markup', () => {
         onClick={() => alert('Clicked login button...')}
         ariaLabel="Login Button"
         type="submit"
-        classname="btn"
+        className="btn btn--primary venus btn--wide"
       />,
     );
     expect(wrapper.find('.btn').length).to.equal(1);
