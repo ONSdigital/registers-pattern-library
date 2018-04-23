@@ -14,43 +14,7 @@ import { tradingStatusBands } from '../utils/convertBands';
 import ONSLogo from '../resources/img/logo.svg';
 
 storiesOf('Full Page Examples (Internal)', module)
-  .add('Full Page', withInfo()(() => {
-    // return (
-    //   <div>
-    //     <div style={{ backgroundColor: '#3B7A9E' }}><LinkButton
-    //       id="LinkButton"
-    //       text="This is the link"
-    //       className="username"
-    //     /></div>
-    //     <Button
-    //       id="loginButton"
-    //       className="btn btn--primary venus btn--wide"
-    //       size="wide"
-    //       text="Login"
-    //       onClick={() => alert('Clicked login button...')}
-    //       ariaLabel="Login Button"
-    //       type="submit"
-    //     />
-    //     <Button
-    //       id="loginButton"
-    //       className="btn btn--secondary btn--border"
-    //       size="wide"
-    //       text="Clear"
-    //       onClick={() => alert('Clear')}
-    //       ariaLabel="Clear Button"
-    //       type="submit"
-    //     />
-    //     <Panel
-    //       id="Panel"
-    //       text="Information Here"
-    //       level="info"
-    //       close={() => 1}
-    //       show
-    //     />
-    //     <FooterInternal />
-    //   </div>
-    // );
-    return (
+  .add('Full Page', withInfo()(() => 
       <section>
         <header className="page__header">
           <div className="logo_container">
@@ -100,9 +64,8 @@ storiesOf('Full Page Examples (Internal)', module)
           </div>
         </section>
         <FooterInternal />
-      </section>
-    );
-  }));
+      </section>),
+  );
 
 storiesOf('Footer (Internal)', module)
   .add('Default Footer with feedback', withInfo()(() =>
@@ -143,8 +106,8 @@ storiesOf('Button (Internal)', module)
       type="submit"
     />),
   ))
-  .add('Button with loading spinner', withInfo()(() => {
-    return (<Button
+  .add('Button with loading spinner', withInfo()(() =>
+    (<Button
       id="loginButton"
       className="btn btn--primary venus btn--wide"
       size="wide"
@@ -153,25 +116,25 @@ storiesOf('Button (Internal)', module)
       ariaLabel="Login Button"
       type="submit"
       loading
-    />);
-  }));
+    />),
+  ));
 
 storiesOf('Link Button (Internal)', module)
-  .add('Link Button', withInfo()(() => {
-    return (<LinkButton
+  .add('Link Button', withInfo()(() =>
+    (<LinkButton
       id="LinkButton"
       text="This is the link"
       className="username"
-    />);
-  }))
-  .add('Link Button spinner', withInfo()(() => {
-    return (<div style={{ backgroundColor: '#3B7A9E', width: '100px' }}><LinkButton
+    />),
+  ))
+  .add('Link Button spinner', withInfo()(() => 
+    (<div style={{ backgroundColor: '#3B7A9E', width: '100px' }}><LinkButton
       id="LinkButton"
       text="This is the link"
       className="username"
       loading
-    /></div>);
-  }));
+    /></div>),
+  ));
 
 storiesOf('Pagination (Internal)', module)
   .add('Pagination', withInfo()(() =>
