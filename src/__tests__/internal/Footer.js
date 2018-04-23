@@ -1,7 +1,6 @@
 import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+import { shallow, render } from 'enzyme';
 import { expect } from 'chai';
-import sinon from 'sinon';
 import Footer from '../../components/internal/Footer';
 
 // Shallow Rendering

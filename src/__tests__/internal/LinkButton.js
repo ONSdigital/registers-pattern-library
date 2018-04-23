@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow, mount, render } from 'enzyme';
 import { expect } from 'chai';
-import sinon from 'sinon';
 import LinkButton from '../../components/internal/LinkButton';
 
 // Shallow Rendering
@@ -61,14 +60,14 @@ describe('Button - Full DOM Rendering', () => {
   // Static Rendered Markup
   // https://github.com/airbnb/enzyme/blob/master/docs/api/render.md
 describe('LinkButton - Static Rendered Markup', () => {
-    it('renders the LinkButton', () => {
-      const wrapper = render(
-        <LinkButton
-          id="LinkButton"
-          text="This is the link"
-          className="LinkClass"
-        />,
-      );
-      expect(wrapper.find('.LinkClass').length).to.equal(1);
-    });
+  it('renders the LinkButton', () => {
+    const wrapper = render(
+      <LinkButton
+        id="LinkButton"
+        text="This is the link"
+        className="LinkClass"
+      />,
+    );
+    expect(wrapper.find('.LinkClass').length).to.equal(1);
+  });
 });
