@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, render } from 'enzyme';
 import { expect } from 'chai';
 import Panel from '../../components/internal/Panel';
 
