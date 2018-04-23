@@ -5,7 +5,7 @@ import { expect } from 'chai';
 //  import SelectMultipleInput from '../../components/internal/SelectMultipleInput';
 
 //-----------------------
-//This test doesn't work, there seems to be an issue with 'react-select/dist/react-select.min.css
+//  This test doesn't work, there seems to be an issue with 'react-select/dist/react-select.min.css
 //-----------------------
 
 // // Shallow Rendering
