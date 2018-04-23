@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, mount, render } from 'enzyme';
 import { expect } from 'chai';
 import sinon from 'sinon';
-import Button from '../components/Button';
+import Button from '../../components/internal/Button';
 
 // Shallow Rendering
 // https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md
@@ -16,6 +16,7 @@ describe('Button - Shallow Rendering', () => {
         onClick={() => alert('Clicked login button...')}
         ariaLabel="Login Button"
         type="submit"
+        className="btn btn--primary venus btn--wide"
       />,
     );
     expect(wrapper.find('.btn')).to.have.length(1);
@@ -25,14 +26,15 @@ describe('Button - Shallow Rendering', () => {
     const wrapper = shallow(
       <Button
         id="loginButton"
-        size="thin"
+        size="wide"
         text="Login"
         onClick={() => alert('Clicked login button...')}
         ariaLabel="Login Button"
         type="submit"
+        className="btn btn--primary venus btn--wide"
       />,
     );
-    expect(wrapper.find('.btn').hasClass('btn--thin')).to.equal(true);
+    expect(wrapper.find('.btn').hasClass('btn--wide')).to.equal(true);
   });
 
   it('to have the correct text', () => {
@@ -63,6 +65,23 @@ describe('Button - Shallow Rendering', () => {
     );
     expect(wrapper.find('#spinner')).to.have.length(1);
   });
+
+  it('to check if the onClick method runs when loading spinner is showing', () => {
+    const onButtonClick = sinon.spy();
+    const wrapper = shallow(
+      <Button
+        iid="loginButton"
+        size="wide"
+        text="Login"
+        onClick={onButtonClick}
+        ariaLabel="Login Button"
+        type="submit"
+        loading
+      />,
+    );
+    wrapper.find('button').simulate('click');
+    expect(onButtonClick.calledOnce).to.equal(false);
+  });
 });
 
 // Full DOM Rendering
@@ -84,6 +103,23 @@ describe('Button - Full DOM Rendering', () => {
     wrapper.setProps({ bar: 'foo' });
     expect(wrapper.props().bar).to.equal('foo');
   });
+
+  it('to should handle click event', () => {
+    const onButtonClick = sinon.spy();
+    const wrapper = shallow(
+      <Button
+        id="loginButton"
+        size="wide"
+        text="Login"
+        onClick={onButtonClick}
+        ariaLabel="Login Button"
+        type="submit"
+        loading={false}
+      />,
+    );
+    wrapper.find('button').simulate('click');
+    expect(onButtonClick.calledOnce).to.equal(true);
+  });
 });
 
 // Static Rendered Markup
@@ -98,6 +134,7 @@ describe('Button - Static Rendered Markup', () => {
         onClick={() => alert('Clicked login button...')}
         ariaLabel="Login Button"
         type="submit"
+        className="btn btn--primary venus btn--wide"
       />,
     );
     expect(wrapper.find('.btn').length).to.equal(1);

@@ -1,16 +1,16 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import NavBar from '../components/NavBar';
-import BreadCrumb from '../components/BreadCrumb';
-import Button from '../components/Button';
-import Banner from '../components/Banner';
-import TitleAndDescription from '../components/TitleAndDescription';
-import './ons_css.css';
+import Header from '../components/external/Header';
+import Footer from '../components/external/Footer';
+import NavBar from '../components/external/NavBar';
+import BreadCrumb from '../components/external/BreadCrumb';
+import Button from '../components/external/Button';
+import Banner from '../components/external/Banner';
+import TitleAndDescription from '../components/external/TitleAndDescription';
+import './css/external_ons_css.css';
 
-storiesOf('Full Page Examples', module)
+storiesOf('Full Page Examples (External)', module)
   .add('full page', withInfo()(() => {
     return (
       <div>
@@ -51,7 +51,7 @@ storiesOf('Full Page Examples', module)
         <TitleAndDescription
           title="Accessibility"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at lectus dapibus, interdum massa in, vehicula augue. Ut non congue elit. Donec eget imperdiet nulla, vel tincidunt metus. Nunc tempus lectus id volutpat ornare. Quisque auctor massa ante, vitae viverra ipsum rhoncus nec. Morbi non lectus varius, iaculis augue vel, laoreet arcu. Vivamus rutrum congue tempus. Duis turpis massa, viverra id mattis eget, auctor id augue. Sed luctus at nisl nec posuere. Praesent eu varius sem. Morbi elementum mauris id ligula pulvinar, sed iaculis ipsum luctus."
-          marginBottom={1}
+          marginBottom='1'
         />
         <Footer
           footerSection={[
@@ -64,7 +64,7 @@ storiesOf('Full Page Examples', module)
     );
   }));
 
-storiesOf('Header', module)
+storiesOf('Header (External)', module)
   .add('with links (when logged in)', withInfo()(() =>
     (<Header
       showHeaderItems
@@ -102,7 +102,7 @@ storiesOf('Header', module)
     />),
   ));
 
-storiesOf('Footer', module)
+storiesOf('Footer (External)', module)
   .add('links and email section', withInfo()(() =>
     (<Footer
       footerSection={[
@@ -122,7 +122,7 @@ storiesOf('Footer', module)
     />),
   ));
 
-storiesOf('NavBar', module)
+storiesOf('NavBar (External)', module)
   .add('with normal links', withInfo()(() =>
     (<NavBar
       primary="/Home"
@@ -143,7 +143,7 @@ storiesOf('NavBar', module)
     />),
   ));
 
-storiesOf('BreadCrumb', module)
+storiesOf('BreadCrumb (External)', module)
   .add('with mix of links and text', withInfo()(() =>
     (<BreadCrumb
       breadCrumbItems={[
@@ -172,7 +172,7 @@ storiesOf('BreadCrumb', module)
     />),
   ));
 
-storiesOf('Button', module)
+storiesOf('Button (External)', module)
   .add('normal button', withInfo()(() =>
     (<Button
       id="loginButton"
@@ -205,7 +205,7 @@ storiesOf('Button', module)
     />);
   }));
 
-storiesOf('Banner', module)
+storiesOf('Banner (External)', module)
   .add('alpha banner with message', withInfo()(() =>
     (<Banner
       text="ALPHA"
@@ -225,7 +225,7 @@ storiesOf('Banner', module)
     />),
   ));
 
-storiesOf('Title and Description', module)
+storiesOf('Title and Description (External)', module)
   .add('Title with description and margin bottom', withInfo()(() =>
     (<TitleAndDescription
       title="Accessibility"

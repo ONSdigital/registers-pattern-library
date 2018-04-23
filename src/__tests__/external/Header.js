@@ -2,8 +2,8 @@ import React from 'react';
 import { shallow, mount, render } from 'enzyme';
 import { expect } from 'chai';
 import sinon from 'sinon';
-import Header from '../components/Header';
-import Button from '../components/Button';
+import Header from '../../components/external/Header';
+import Button from '../../components/external/Button';
 
 // Shallow Rendering
 // https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md
