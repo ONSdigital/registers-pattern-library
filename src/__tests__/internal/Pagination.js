@@ -14,7 +14,7 @@ describe('Pagination - Shallow Rendering', () => {
         pagesize={4}
         numPages={6}
       />,
-     );
+    );
     expect(wrapper.find('.mars')).to.have.length(2);
   });
 });

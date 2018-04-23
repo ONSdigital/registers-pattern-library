@@ -19,8 +19,8 @@ describe('TextInput - Shallow Rendering', () => {
   });
 });
 
-  // Static Rendered Markup
-  // https://github.com/airbnb/enzyme/blob/master/docs/api/render.md
+// Static Rendered Markup
+// https://github.com/airbnb/enzyme/blob/master/docs/api/render.md
 describe('TextInput - Static Rendered Markup', () => {
   it('renders the TextInput', () => {
     const wrapper = render(

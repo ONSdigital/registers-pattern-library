@@ -18,8 +18,8 @@ describe('Panel - Shallow Rendering', () => {
   });
 });
 
-  // Static Rendered Markup
-  // https://github.com/airbnb/enzyme/blob/master/docs/api/render.md
+// Static Rendered Markup
+// https://github.com/airbnb/enzyme/blob/master/docs/api/render.md
 describe('Panel - Static Rendered Markup', () => {
   it('renders the Panel', () => {
     const wrapper = render(

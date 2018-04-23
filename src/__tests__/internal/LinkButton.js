@@ -58,8 +58,8 @@ describe('Button - Full DOM Rendering', () => {
   });
 });
 
-  // Static Rendered Markup
-  // https://github.com/airbnb/enzyme/blob/master/docs/api/render.md
+// Static Rendered Markup
+// https://github.com/airbnb/enzyme/blob/master/docs/api/render.md
 describe('LinkButton - Static Rendered Markup', () => {
   it('renders the LinkButton', () => {
     const wrapper = render(
