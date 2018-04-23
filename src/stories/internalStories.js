@@ -14,7 +14,7 @@ import { tradingStatusBands } from '../utils/convertBands';
 import ONSLogo from '../resources/img/logo.svg';
 
 storiesOf('Full Page Examples (Internal)', module)
-  .add('Full Page', withInfo()(() => 
+  .add('Full Page', withInfo()(() =>
       <section>
         <header className="page__header">
           <div className="logo_container">
