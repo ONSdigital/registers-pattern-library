@@ -16,7 +16,7 @@ describe('LinkButton - Shallow Rendering', () => {
       />,
     );
     expect(wrapper.find('.LinkClass')).to.have.length(1);
-  })
+  });
 });
 
   it('to have the correct text', () => {
@@ -29,7 +29,7 @@ describe('LinkButton - Shallow Rendering', () => {
     );
     expect(wrapper.text()).to.equal('This is the link');
   });
-  
+
   it('to show the loading spinner', () => {
     const wrapper = shallow(
       <LinkButton
@@ -40,7 +40,7 @@ describe('LinkButton - Shallow Rendering', () => {
       />,
     );
     expect(wrapper.find('#spinner')).to.have.length(1);
-});
+  });
 
 // Full DOM Rendering
 // https://github.com/airbnb/enzyme/blob/master/docs/api/mount.md
