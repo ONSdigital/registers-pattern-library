@@ -1,8 +1,8 @@
-//import React from 'react';
-//import { shallow, mount, render } from 'enzyme';
+//  import React from 'react';
+//  import { shallow, mount, render } from 'enzyme';
 import { expect } from 'chai';
-//import sinon from 'sinon';
-// import SelectMultipleInput from '../../components/internal/SelectMultipleInput';
+//  import sinon from 'sinon';
+//  import SelectMultipleInput from '../../components/internal/SelectMultipleInput';
 
 //-----------------------
 //This test doesn't work, there seems to be an issue with 'react-select/dist/react-select.min.css
